@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,1132 +5,168 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Hari Prapan — Start Early Ph.D. Research Fellow at IIT Gandhinagar. Research in mechanism design, online learning, bandits, strategic machine learning, and LLMs."
+    content="Hari Prapan — Start Early Ph.D. Research Fellow in Computer Science and Engineering at IIT Gandhinagar, working on mechanism design, online learning, bandits, and strategic machine learning."
   />
-  <meta name="theme-color" content="#0b1220" />
   <title>Hari Prapan | Ph.D. Research Fellow</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
     rel="stylesheet"
   />
 
-  <style>
-    :root {
-      --bg: #f6f4ef;
-      --surface: #ffffff;
-      --surface-2: #f0eee8;
-      --ink: #10131a;
-      --muted: #646873;
-      --line: #dcd9d1;
-      --navy: #0b1220;
-      --navy-2: #111c31;
-      --accent: #3157d5;
-      --accent-soft: #e9edff;
-      --green: #15745a;
-      --gold: #a66d10;
-      --radius-lg: 30px;
-      --radius-md: 20px;
-      --radius-sm: 12px;
-      --shadow: 0 20px 60px rgba(15, 20, 35, 0.08);
-      --max: 1180px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 92px;
-    }
-
-    body {
-      font-family: "Manrope", sans-serif;
-      background: var(--bg);
-      color: var(--ink);
-      line-height: 1.65;
-      overflow-x: hidden;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    button,
-    input,
-    textarea {
-      font: inherit;
-    }
-
-    ::selection {
-      background: var(--navy);
-      color: white;
-    }
-
-    .container {
-      width: min(var(--max), calc(100% - 42px));
-      margin-inline: auto;
-    }
-
-    .section {
-      padding: 110px 0;
-    }
-
-    .section--tight {
-      padding: 78px 0;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-family: "DM Mono", monospace;
-      font-size: 0.78rem;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 30px;
-      height: 1px;
-      background: currentColor;
-    }
-
-    .section-head {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 60px;
-      align-items: end;
-      margin-bottom: 54px;
-    }
-
-    .section-head h2 {
-      font-size: clamp(2.2rem, 5vw, 4.7rem);
-      line-height: 0.98;
-      letter-spacing: -0.055em;
-      font-weight: 800;
-      max-width: 780px;
-    }
-
-    .section-head p {
-      color: var(--muted);
-      max-width: 520px;
-      font-size: 1.02rem;
-    }
-
-    .nav {
-      position: fixed;
-      inset: 0 0 auto 0;
-      z-index: 1000;
-      background: rgba(246, 244, 239, 0.86);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(220, 217, 209, 0.8);
-    }
-
-    .nav-inner {
-      width: min(var(--max), calc(100% - 42px));
-      min-height: 76px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 26px;
-    }
-
-    .brand {
-      font-weight: 800;
-      font-size: 1.22rem;
-      letter-spacing: -0.04em;
-      white-space: nowrap;
-    }
-
-    .brand span {
-      color: var(--accent);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: #4f5460;
-    }
-
-    .nav-links a {
-      position: relative;
-      transition: color 0.2s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--ink);
-    }
-
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 100%;
-      bottom: -5px;
-      height: 1px;
-      background: var(--ink);
-      transition: right 0.25s ease;
-    }
-
-    .nav-links a:hover::after {
-      right: 0;
-    }
-
-    .nav-cta {
-      padding: 10px 15px;
-      border: 1px solid var(--ink);
-      border-radius: 999px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      transition: 0.2s ease;
-      white-space: nowrap;
-    }
-
-    .nav-cta:hover {
-      background: var(--ink);
-      color: white;
-    }
-
-    .menu-btn {
-      display: none;
-      border: 0;
-      background: none;
-      width: 42px;
-      height: 42px;
-      cursor: pointer;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .menu-btn span,
-    .menu-btn span::before,
-    .menu-btn span::after {
-      display: block;
-      width: 22px;
-      height: 1.5px;
-      background: var(--ink);
-      position: relative;
-      transition: 0.2s ease;
-    }
-
-    .menu-btn span::before,
-    .menu-btn span::after {
-      content: "";
-      position: absolute;
-      left: 0;
-    }
-
-    .menu-btn span::before { top: -7px; }
-    .menu-btn span::after { top: 7px; }
-
-    .hero {
-      min-height: 100vh;
-      padding-top: 145px;
-      padding-bottom: 78px;
-      display: flex;
-      align-items: center;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.55fr);
-      gap: 76px;
-      align-items: center;
-    }
-
-    .hero-kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 8px 13px;
-      font-family: "DM Mono", monospace;
-      font-size: 0.74rem;
-      letter-spacing: 0.04em;
-      color: #545a66;
-      background: rgba(255,255,255,0.5);
-      margin-bottom: 25px;
-    }
-
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 0 5px rgba(21,116,90,0.1);
-    }
-
-    .hero h1 {
-      font-size: clamp(4.2rem, 9.2vw, 8.8rem);
-      line-height: 0.83;
-      letter-spacing: -0.08em;
-      font-weight: 800;
-      margin-left: -0.07em;
-      margin-bottom: 30px;
-    }
-
-    .hero h1 strong {
-      font-weight: 800;
-    }
-
-    .hero-role {
-      font-size: clamp(1.25rem, 2.5vw, 2rem);
-      line-height: 1.28;
-      font-weight: 700;
-      letter-spacing: -0.035em;
-      max-width: 820px;
-      margin-bottom: 20px;
-    }
-
-    .hero-role span {
-      color: var(--accent);
-    }
-
-    .hero-text {
-      font-size: 1.08rem;
-      color: var(--muted);
-      max-width: 760px;
-      margin-bottom: 30px;
-    }
-
-    .hero-text strong {
-      color: var(--ink);
-      font-weight: 700;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 34px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      min-height: 48px;
-      padding: 0 19px;
-      border-radius: 999px;
-      font-size: 0.88rem;
-      font-weight: 700;
-      transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-primary {
-      background: var(--navy);
-      color: white;
-    }
-
-    .btn-secondary {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.55);
-    }
-
-    .hero-topics {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .chip {
-      padding: 7px 10px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      font-family: "DM Mono", monospace;
-      font-size: 0.7rem;
-      color: #5a606b;
-      background: rgba(255,255,255,0.45);
-    }
-
-    .profile-card {
-      background: var(--navy);
-      color: white;
-      border-radius: var(--radius-lg);
-      padding: 18px;
-      box-shadow: var(--shadow);
-      transform: rotate(1.5deg);
-    }
-
-    .profile-visual {
-      <img src="images/profile.png" alt="Hari Prapan" />
-    }
-
-    .profile-visual img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      inset: 0;
-    }
-
-    .profile-initials {
-      font-size: 6rem;
-      font-weight: 800;
-      letter-spacing: -0.08em;
-      opacity: 0.88;
-    }
-
-    .profile-card figcaption {
-      padding: 18px 7px 6px;
-    }
-
-    .profile-card figcaption strong {
-      display: block;
-      font-size: 1rem;
-      margin-bottom: 4px;
-    }
-
-    .profile-card figcaption span {
-      font-family: "DM Mono", monospace;
-      font-size: 0.72rem;
-      color: #aeb8cb;
-    }
-
-    .quick-facts {
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .facts-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    .fact {
-      padding: 31px 26px;
-      border-right: 1px solid var(--line);
-    }
-
-    .fact:last-child { border-right: 0; }
-
-    .fact strong {
-      display: block;
-      font-size: 1.35rem;
-      letter-spacing: -0.04em;
-      margin-bottom: 3px;
-    }
-
-    .fact span {
-      color: var(--muted);
-      font-size: 0.78rem;
-      font-family: "DM Mono", monospace;
-    }
-
-    /* EDUCATION */
-    .education-section {
-      background: var(--surface);
-    }
-
-    .education-intro {
-      max-width: 820px;
-      font-size: 1.09rem;
-      color: var(--muted);
-      margin: -20px 0 46px;
-    }
-
-    .education-list {
-      display: grid;
-      gap: 18px;
-    }
-
-    .edu-card {
-      display: grid;
-      grid-template-columns: 230px minmax(0, 1fr);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      background: var(--surface);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .edu-card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow);
-    }
-
-    .edu-card.current {
-      border-color: #b9c5ef;
-      box-shadow: inset 4px 0 0 var(--accent);
-    }
-
-    .edu-visual {
-      min-height: 100%;
-      background: var(--surface-2);
-      border-right: 1px solid var(--line);
-      display: grid;
-      place-items: center;
-      padding: 22px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .edu-visual img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .edu-monogram {
-      width: 104px;
-      height: 104px;
-      border-radius: 50%;
-      background: var(--navy);
-      color: white;
-      display: grid;
-      place-items: center;
-      font-weight: 800;
-      font-size: 1.25rem;
-      letter-spacing: -0.03em;
-      text-align: center;
-      line-height: 1.05;
-      padding: 12px;
-    }
-
-    .edu-body {
-      padding: 31px 34px 32px;
-    }
-
-    .edu-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 22px;
-      align-items: flex-start;
-      margin-bottom: 13px;
-    }
-
-    .edu-top h3 {
-      font-size: clamp(1.3rem, 2.4vw, 1.8rem);
-      letter-spacing: -0.04em;
-      line-height: 1.2;
-    }
-
-    .edu-date {
-      flex: 0 0 auto;
-      font-family: "DM Mono", monospace;
-      font-size: 0.72rem;
-      color: var(--muted);
-      padding-top: 5px;
-    }
-
-    .edu-school {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 700;
-      color: var(--accent);
-      margin-bottom: 15px;
-    }
-
-    .edu-body p {
-      color: var(--muted);
-      margin-bottom: 14px;
-    }
-
-    .edu-points {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 18px;
-    }
-
-    .edu-points span {
-      border-radius: 999px;
-      background: var(--surface-2);
-      padding: 7px 10px;
-      font-size: 0.73rem;
-      font-weight: 650;
-      color: #555b65;
-    }
-
-    .image-note {
-      margin-top: 22px;
-      padding: 15px 17px;
-      border: 1px dashed #bbb7ad;
-      border-radius: 12px;
-      color: var(--muted);
-      font-size: 0.8rem;
-      background: #faf9f6;
-    }
-
-    /* RESEARCH */
-    .research-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .research-card {
-      min-height: 330px;
-      padding: 31px;
-      border-radius: var(--radius-md);
-      border: 1px solid var(--line);
-      background: var(--surface);
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.2s ease;
-    }
-
-    .research-card:hover { transform: translateY(-3px); }
-
-    .research-card.primary {
-      grid-column: span 2;
-      min-height: 350px;
-      background: var(--navy);
-      color: white;
-      border-color: var(--navy);
-    }
-
-    .card-index {
-      font-family: "DM Mono", monospace;
-      font-size: 0.75rem;
-      color: var(--muted);
-      margin-bottom: auto;
-    }
-
-    .primary .card-index { color: #9ca9c1; }
-
-    .research-card h3 {
-      font-size: clamp(1.55rem, 3.5vw, 2.6rem);
-      letter-spacing: -0.055em;
-      line-height: 1.05;
-      margin: 34px 0 13px;
-    }
-
-    .research-card p {
-      color: var(--muted);
-      max-width: 700px;
-    }
-
-    .primary p { color: #b7c0d0; }
-
-    .research-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 22px;
-    }
-
-    .research-tags span {
-      font-family: "DM Mono", monospace;
-      font-size: 0.68rem;
-      padding: 7px 9px;
-      border: 1px solid var(--line);
-      border-radius: 7px;
-    }
-
-    .primary .research-tags span {
-      border-color: #34415a;
-      color: #d7ddec;
-    }
-
-    /* ACADEMIC EXPERIENCE */
-    .experience-section {
-      background: var(--navy);
-      color: white;
-    }
-
-    .experience-section .eyebrow,
-    .experience-section .section-head p {
-      color: #aab4c7;
-    }
-
-    .experience-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 26px;
-    }
-
-    .experience-column h3 {
-      font-size: 1rem;
-      font-family: "DM Mono", monospace;
-      font-weight: 500;
-      color: #9ca9c1;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .exp-item {
-      display: grid;
-      grid-template-columns: 120px 1fr;
-      gap: 20px;
-      padding: 24px 0;
-      border-top: 1px solid #29354a;
-    }
-
-    .exp-date {
-      font-family: "DM Mono", monospace;
-      color: #8d99ae;
-      font-size: 0.72rem;
-    }
-
-    .exp-item strong {
-      display: block;
-      font-size: 1.05rem;
-      margin-bottom: 4px;
-    }
-
-    .exp-item p {
-      color: #9ea9bc;
-      font-size: 0.9rem;
-    }
-
-    /* WORK */
-    .work-stack {
-      border-top: 1px solid var(--line);
-    }
-
-    .work-item {
-      display: grid;
-      grid-template-columns: 80px 1fr 180px;
-      gap: 28px;
-      align-items: start;
-      padding: 34px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .work-number {
-      font-family: "DM Mono", monospace;
-      color: var(--muted);
-      font-size: 0.78rem;
-      padding-top: 5px;
-    }
-
-    .work-item h3 {
-      font-size: clamp(1.25rem, 2.3vw, 1.8rem);
-      letter-spacing: -0.04em;
-      margin-bottom: 8px;
-    }
-
-    .work-item p {
-      color: var(--muted);
-      max-width: 760px;
-    }
-
-    .work-type {
-      text-align: right;
-      font-family: "DM Mono", monospace;
-      color: var(--muted);
-      font-size: 0.72rem;
-      padding-top: 5px;
-    }
-
-    /* MILESTONES */
-    .milestones-section {
-      background: var(--surface);
-    }
-
-    .milestone-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .milestone {
-      min-height: 185px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 21px;
-      background: white;
-      transition: 0.2s ease;
-    }
-
-    a.milestone:hover {
-      transform: translateY(-3px);
-      border-color: #aaa69c;
-    }
-
-    .milestone time {
-      font-family: "DM Mono", monospace;
-      font-size: 0.7rem;
-      color: var(--muted);
-    }
-
-    .milestone strong {
-      display: block;
-      font-size: 1.02rem;
-      line-height: 1.35;
-      margin-top: 24px;
-    }
-
-    .milestone small {
-      display: block;
-      color: var(--muted);
-      margin-top: 7px;
-      line-height: 1.45;
-    }
-
-    .external {
-      margin-top: 18px;
-      font-size: 0.85rem;
-      font-weight: 700;
-    }
-
-    /* ABOUT */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 0.75fr 1.25fr;
-      gap: 70px;
-      align-items: start;
-    }
-
-    .about-sticky {
-      position: sticky;
-      top: 120px;
-    }
-
-    .about-sticky h2 {
-      font-size: clamp(2.4rem, 5vw, 4.8rem);
-      line-height: 0.95;
-      letter-spacing: -0.06em;
-    }
-
-    .about-copy {
-      display: grid;
-      gap: 22px;
-      font-size: 1.07rem;
-      color: var(--muted);
-    }
-
-    .about-copy strong { color: var(--ink); }
-
-    .personal-note {
-      margin-top: 17px;
-      padding: 24px;
-      border-radius: 18px;
-      background: var(--surface-2);
-      color: #555b65;
-    }
-
-    .personal-note strong {
-      display: block;
-      color: var(--ink);
-      margin-bottom: 8px;
-    }
-
-    /* CONTACT */
-    .contact-section {
-      padding-bottom: 36px;
-    }
-
-    .contact-card {
-      background: var(--navy);
-      color: white;
-      border-radius: var(--radius-lg);
-      padding: clamp(36px, 7vw, 80px);
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 70px;
-      align-items: end;
-    }
-
-    .contact-card h2 {
-      font-size: clamp(2.6rem, 6vw, 5.6rem);
-      line-height: 0.95;
-      letter-spacing: -0.06em;
-      margin-bottom: 20px;
-    }
-
-    .contact-card p {
-      color: #aab4c7;
-      max-width: 650px;
-    }
-
-    .contact-links {
-      display: grid;
-      gap: 9px;
-    }
-
-    .contact-link {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      align-items: center;
-      border-top: 1px solid #2a364b;
-      padding: 15px 0;
-      color: #d7ddec;
-      font-size: 0.9rem;
-    }
-
-    .contact-link:hover { color: white; }
-
-    footer {
-      width: min(var(--max), calc(100% - 42px));
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      gap: 24px;
-      padding: 24px 0 35px;
-      color: var(--muted);
-      font-size: 0.76rem;
-      font-family: "DM Mono", monospace;
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity 0.65s ease, transform 0.65s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (max-width: 1000px) {
-      .hero-grid,
-      .section-head,
-      .contact-card,
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-grid { gap: 45px; }
-      .profile-card { max-width: 500px; transform: none; }
-      .profile-visual { min-height: 430px; }
-      .section-head { gap: 22px; }
-      .facts-grid { grid-template-columns: repeat(2, 1fr); }
-      .fact:nth-child(2) { border-right: 0; }
-      .fact:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
-      .experience-grid { grid-template-columns: 1fr; }
-      .milestone-grid { grid-template-columns: repeat(2, 1fr); }
-      .about-sticky { position: static; }
-      .work-item { grid-template-columns: 55px 1fr; }
-      .work-type { grid-column: 2; text-align: left; padding-top: 0; }
-    }
-
-    @media (max-width: 820px) {
-      .nav-links,
-      .nav-cta { display: none; }
-      .menu-btn { display: flex; }
-
-      .nav.open .nav-links {
-        display: flex;
-        position: absolute;
-        top: 76px;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 24px 21px 30px;
-        background: var(--bg);
-        border-bottom: 1px solid var(--line);
-        gap: 20px;
-      }
-
-      .hero { padding-top: 120px; }
-      .hero h1 { font-size: clamp(4rem, 19vw, 6.8rem); }
-      .education-list { gap: 14px; }
-      .edu-card { grid-template-columns: 1fr; }
-      .edu-visual { min-height: 210px; border-right: 0; border-bottom: 1px solid var(--line); }
-      .research-grid { grid-template-columns: 1fr; }
-      .research-card.primary { grid-column: auto; }
-      .milestone-grid { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 600px) {
-      .container,
-      .nav-inner,
-      footer { width: min(100% - 28px, var(--max)); }
-      .section { padding: 82px 0; }
-      .hero { padding-bottom: 58px; }
-      .profile-visual { min-height: 340px; }
-      .facts-grid { grid-template-columns: 1fr; }
-      .fact { border-right: 0; border-bottom: 1px solid var(--line); }
-      .fact:last-child { border-bottom: 0; }
-      .edu-body { padding: 25px 22px; }
-      .edu-top { flex-direction: column; gap: 4px; }
-      .exp-item { grid-template-columns: 1fr; gap: 7px; }
-      .work-item { grid-template-columns: 1fr; gap: 8px; }
-      .work-type { grid-column: auto; }
-      footer { flex-direction: column; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header class="nav" id="siteNav">
-    <div class="nav-inner">
-      <a class="brand" href="#top">Hari Prapan<span>.</span></a>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="#home" aria-label="Hari Prapan home">Hari Prapan<span>.</span></a>
 
-      <nav class="nav-links" aria-label="Main navigation">
+      <nav class="nav-links" aria-label="Primary navigation">
         <a href="#education">Education</a>
         <a href="#research">Research</a>
-        <a href="#experience">Teaching</a>
+        <a href="#experience">Experience</a>
         <a href="#work">Work</a>
         <a href="#milestones">Milestones</a>
         <a href="#about">About</a>
       </nav>
 
       <a class="nav-cta" href="#contact">Contact</a>
-
-      <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu" aria-expanded="false">
-        <span></span>
-      </button>
     </div>
   </header>
 
-  <main id="top">
-    <!-- ============================================================
-      HERO
-      To use your photograph, replace the initials inside .profile-visual with:
-      
-      Keep the image file at: images/profile.jpg
-    ============================================================= -->
-    <section class="hero">
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
       <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <div class="hero-kicker">
-            <span class="status-dot"></span>
-            Ph.D. Research Fellow · IIT Gandhinagar
-          </div>
+        <div class="hero-copy">
+          <p class="eyebrow">Ph.D. Research Fellow · IIT Gandhinagar</p>
 
-          <h1><strong>Hari<br />Prapan</strong></h1>
+          <h1>Hari Prapan</h1>
 
           <p class="hero-role">
-            Start Early Ph.D. Research Fellow in <span>Computer Science &amp; Engineering</span>
+            Start Early Ph.D. Research Fellow in Computer Science &amp; Engineering
             at IIT Gandhinagar.
           </p>
 
-          <p class="hero-text">
-            I work under the guidance of <strong>Prof. Manisha Padala</strong>. My research lies at
-            the intersection of <strong>mechanism design and machine learning</strong>, with a focus
-            on how incentives, strategic behavior, and uncertainty shape learning systems. My current
-            interests include online learning, bandits, contract design, LLM routing, and incentive-aware AI.
+          <p class="hero-description">
+            I work under the guidance of Prof. Manisha Padala. My research lies
+            at the intersection of mechanism design and machine learning, with a
+            focus on incentives, strategic behavior, and learning under uncertainty.
+            My current interests include online learning, bandits, contract design,
+            LLM routing, and incentive-aware AI.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#education">View education ↓</a>
-            <a class="btn btn-secondary" href="https://sites.google.com/view/hariprapan/" target="_blank" rel="noreferrer">Original academic page ↗</a>
-            <!-- Optional CV button. Put your PDF at assets/Hari_Prapan_CV.pdf and uncomment:
-            <a class="btn btn-secondary" href="assets/Hari_Prapan_CV.pdf" target="_blank">CV ↗</a>
-            -->
+            <a class="btn btn-primary" href="#research">Explore research</a>
+            <a
+              class="btn btn-secondary"
+              href="https://sites.google.com/view/hariprapan/"
+              target="_blank"
+              rel="noreferrer"
+            >Academic page ↗</a>
           </div>
 
-          <div class="hero-topics" aria-label="Research interests">
-            <span class="chip">Mechanism Design</span>
-            <span class="chip">Online Learning</span>
-            <span class="chip">Bandits</span>
-            <span class="chip">LLMs</span>
-            <span class="chip">Strategic ML</span>
+          <div class="topic-row" aria-label="Research topics">
+            <span>Mechanism Design</span>
+            <span>Online Learning</span>
+            <span>Bandits</span>
+            <span>LLMs</span>
+            <span>Strategic ML</span>
           </div>
         </div>
 
-        <figure class="profile-card reveal">
-          <div class="profile-visual">
-            <!-- ADD PROFILE IMAGE HERE:
-            <img src="images/profile.jpg" alt="Portrait of Hari Prapan" />
-            -->
-            <div class="profile-initials">HP</div>
+        <aside class="profile-panel">
+          <div class="profile-photo">
+            <img
+              src="images/profile.jpg"
+              alt="Hari Prapan"
+              onerror="this.style.display='none'; this.parentElement.classList.add('photo-missing');"
+            />
+            <div class="photo-fallback">
+              <span>HP</span>
+              <small>Add images/profile.jpg</small>
+            </div>
           </div>
-          <figcaption>
-            <strong>Hari Prapan</strong>
-            <span>CSE · IIT Gandhinagar · India</span>
-          </figcaption>
-        </figure>
+
+          <div class="profile-info">
+            <p class="profile-name">Hari Prapan</p>
+            <p class="profile-location">CSE · IIT Gandhinagar · India</p>
+          </div>
+
+          <div class="profile-stats">
+            <div>
+              <strong>2025—</strong>
+              <span>Ph.D. @ IIT Gandhinagar</span>
+            </div>
+            <div>
+              <strong>3</strong>
+              <span>Degrees completed after Class XII</span>
+            </div>
+            <div>
+              <strong>Rank 1</strong>
+              <span>M.Sc. · 9.55 CGPA · CUSB</span>
+            </div>
+            <div>
+              <strong>≈99 %ile</strong>
+              <span>GATE 2025 · Data Science &amp; AI</span>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section class="quick-facts" aria-label="Profile highlights">
-      <div class="container facts-grid">
-        <div class="fact reveal">
-          <strong>2025—</strong>
-          <span>Ph.D. @ IIT Gandhinagar</span>
-        </div>
-        <div class="fact reveal">
-          <strong>3 degrees</strong>
-          <span>Completed in five years after Class XII</span>
-        </div>
-        <div class="fact reveal">
-          <strong>Rank 1</strong>
-          <span>M.Sc. · 9.55 CGPA · CUSB</span>
-        </div>
-        <div class="fact reveal">
-          <strong>≈99 %ile</strong>
-          <span>GATE 2025 · Data Science &amp; AI</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-      EDUCATION — intentionally placed immediately after the hero.
-      Each card has an image area. To add a real photograph/logo,
-      insert an <img> tag inside its .edu-visual block, e.g.
-      <img src="images/iitgn.jpg" alt="IIT Gandhinagar" />
-    ============================================================= -->
-    <section class="section education-section" id="education">
+    <!-- EDUCATION -->
+    <section id="education" class="section">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="section-head">
           <div>
-            <div class="eyebrow">01 · Education</div>
-            <h2>My academic journey.</h2>
+            <p class="section-index">01 · Education</p>
+            <h2>Academic journey</h2>
           </div>
-          <p>
-            Mathematics, statistics, data science, and computer science form the academic foundation
-            behind my current work on strategic and incentive-aware learning systems.
+          <p class="section-intro">
+            Mathematics, statistics, data science, and computer science form the
+            academic foundation behind my current work on strategic and
+            incentive-aware learning systems.
           </p>
         </div>
 
-        <p class="education-intro reveal">
-          In the five years following my higher-secondary education in 2020, I completed three science
-          degrees while moving progressively from mathematics to statistics, data science, and research in AI.
-          I am now pursuing my doctoral research at IIT Gandhinagar.
-        </p>
-
-        <div class="education-list">
-          <article class="edu-card current reveal">
+        <div class="education-stack">
+          <article class="education-card">
             <div class="edu-visual">
-              <!-- Optional: <img src="images/iitgn.jpg" alt="IIT Gandhinagar campus" /> -->
-              <div class="edu-monogram">IIT<br />GN</div>
+              <img
+                src="images/iitgn.jpg"
+                alt="IIT Gandhinagar"
+                onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');"
+              />
+              <span class="edu-monogram">IITGN</span>
             </div>
-            <div class="edu-body">
-              <div class="edu-top">
-                <h3>Ph.D. in Computer Science &amp; Engineering</h3>
-                <div class="edu-date">2025 — Present</div>
+
+            <div class="edu-content">
+              <div class="edu-topline">
+                <span class="date-pill">2025 — Present</span>
+                <a href="https://iitgn.ac.in/" target="_blank" rel="noreferrer">IIT Gandhinagar ↗</a>
               </div>
-              <a class="edu-school" href="https://iitgn.ac.in/" target="_blank" rel="noreferrer">Indian Institute of Technology Gandhinagar ↗</a>
+
+              <h3>Ph.D. in Computer Science &amp; Engineering</h3>
+
               <p>
-                My ongoing doctoral degree is in Computer Science and Engineering. I work under the
-                guidance of Prof. Manisha Padala, with research primarily in Artificial Intelligence and
-                a particular focus on mechanism design in machine-learning settings.
+                My ongoing doctoral degree is in Computer Science and Engineering.
+                I work under the guidance of Prof. Manisha Padala, with research
+                primarily in Artificial Intelligence and a particular focus on
+                mechanism design in machine-learning settings.
               </p>
+
               <p>
-                I study how incentives and strategic behavior influence learning systems, including
-                problems where decisions must be learned while the participating agents have their own objectives.
+                I study how incentives and strategic behavior influence learning
+                systems, including problems where decisions must be learned while
+                participating agents have their own objectives.
               </p>
-              <div class="edu-points">
-                <span>Start Early Ph.D. Research Fellow</span>
+
+              <div class="tag-row">
+                <span>Start Early Ph.D.</span>
                 <span>Mechanism Design</span>
                 <span>Machine Learning</span>
                 <span>Strategic Behavior</span>
@@ -1141,515 +174,570 @@
             </div>
           </article>
 
-          <article class="edu-card reveal">
+          <article class="education-card">
             <div class="edu-visual">
-              <!-- Optional: <img src="images/iitm.jpg" alt="IIT Madras" /> -->
-              <div class="edu-monogram">IIT<br />M</div>
+              <img
+                src="images/iitm.jpg"
+                alt="IIT Madras"
+                onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');"
+              />
+              <span class="edu-monogram">IITM</span>
             </div>
-            <div class="edu-body">
-              <div class="edu-top">
-                <h3>B.S. in Data Science &amp; Applications</h3>
-                <div class="edu-date">2021 — 2025</div>
+
+            <div class="edu-content">
+              <div class="edu-topline">
+                <span class="date-pill">2021 — 2025</span>
+                <a href="https://www.iitm.ac.in/" target="_blank" rel="noreferrer">IIT Madras ↗</a>
               </div>
-              <a class="edu-school" href="https://www.iitm.ac.in/" target="_blank" rel="noreferrer">Indian Institute of Technology Madras ↗</a>
+
+              <h3>B.S. in Data Science &amp; Applications</h3>
+
               <p>
-                A four-year non-campus degree programme offered by IIT Madras. Lectures are delivered
-                online while examinations are conducted in person at designated centres. In the later
-                years, the programme also allows selected offline academic opportunities at IIT campuses.
+                A four-year non-campus degree programme offered by IIT Madras.
+                Lectures are delivered online while examinations are conducted in
+                person at designated centres, with selected offline academic
+                opportunities available during the programme.
               </p>
+
               <p>
-                The programme's flexible structure allowed me to pursue it alongside another degree.
-                I received a 100% scholarship from IIT Madras during the programme. I was awarded the
-                Programming and Data Science diplomas in May 2024 and the B.S. degree at the IIT Madras
-                convocation in June 2026.
+                I received a 100% scholarship during the programme. I was awarded
+                the Programming and Data Science diplomas in May 2024 and the B.S.
+                degree at the IIT Madras convocation in June 2026.
               </p>
-              <div class="edu-points">
+
+              <div class="tag-row">
                 <span>100% Scholarship</span>
                 <span>Data Science</span>
                 <span>Programming</span>
-                <span>Double Diplomas · 2024</span>
+                <span>Double Diplomas</span>
               </div>
             </div>
           </article>
 
-          <article class="edu-card reveal">
+          <article class="education-card">
             <div class="edu-visual">
-              <!-- Optional: <img src="images/cusb.jpg" alt="Central University of South Bihar" /> -->
-              <div class="edu-monogram">CU<br />SB</div>
+              <img
+                src="images/cusb.jpg"
+                alt="Central University of South Bihar"
+                onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');"
+              />
+              <span class="edu-monogram">CUSB</span>
             </div>
-            <div class="edu-body">
-              <div class="edu-top">
-                <h3>M.Sc. in Data Science &amp; Applied Statistics</h3>
-                <div class="edu-date">2023 — 2025</div>
+
+            <div class="edu-content">
+              <div class="edu-topline">
+                <span class="date-pill">2023 — 2025</span>
+                <a href="https://www.cusb.ac.in/" target="_blank" rel="noreferrer">CUSB ↗</a>
               </div>
-              <a class="edu-school" href="https://www.cusb.ac.in/" target="_blank" rel="noreferrer">Central University of South Bihar ↗</a>
+
+              <h3>M.Sc. in Data Science &amp; Applied Statistics</h3>
+
               <p>
-                A two-year on-campus programme offered by the Department of Statistics. The curriculum
-                is strongly statistics-focused while also providing substantial exposure to modern data
-                science and computational courses.
+                A two-year on-campus programme offered by the Department of
+                Statistics, with a strong statistics core and substantial exposure
+                to modern data science and computational courses.
               </p>
+
               <p>
-                As part of the programme, the fourth-semester project was carried out at NIELIT Patna,
-                an institute under the Ministry of Electronics and Information Technology, Government of India.
-                I completed the master's degree with <strong>Rank 1 and a 9.55 CGPA</strong>.
+                My fourth-semester project was carried out at NIELIT Patna. I
+                completed the master's degree with Rank 1 and a 9.55 CGPA.
               </p>
-              <div class="edu-points">
+
+              <div class="tag-row">
                 <span>Rank 1</span>
                 <span>9.55 CGPA</span>
                 <span>Statistics</span>
-                <span>Data Science</span>
                 <span>NIELIT Project</span>
               </div>
             </div>
           </article>
 
-          <article class="edu-card reveal">
+          <article class="education-card">
             <div class="edu-visual">
-              <!-- Optional: <img src="images/du.jpg" alt="University of Delhi" /> -->
-              <div class="edu-monogram">DU</div>
+              <img
+                src="images/du.jpg"
+                alt="University of Delhi"
+                onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');"
+              />
+              <span class="edu-monogram">DU</span>
             </div>
-            <div class="edu-body">
-              <div class="edu-top">
-                <h3>B.Sc. (Hons.) in Mathematics</h3>
-                <div class="edu-date">2020 — 2023</div>
+
+            <div class="edu-content">
+              <div class="edu-topline">
+                <span class="date-pill">2020 — 2023</span>
+                <a href="https://www.du.ac.in/" target="_blank" rel="noreferrer">University of Delhi ↗</a>
               </div>
-              <a class="edu-school" href="https://www.du.ac.in/" target="_blank" rel="noreferrer">University of Delhi ↗</a>
+
+              <h3>B.Sc. (Hons.) in Mathematics</h3>
+
               <p>
-                A three-year on-campus undergraduate degree with an intensive mathematics core and
-                the flexibility to take elective courses from other disciplines.
+                A three-year on-campus undergraduate degree with an intensive
+                mathematics core and the flexibility to take elective courses from
+                other disciplines.
               </p>
+
               <p>
-                Alongside the mathematics curriculum, I also studied Economics and Commerce. This
-                mathematical training continues to inform the theoretical and optimization aspects of my current research.
+                Alongside mathematics, I also studied Economics and Commerce. This
+                mathematical training continues to inform the theoretical and
+                optimization aspects of my current research.
               </p>
-              <div class="edu-points">
+
+              <div class="tag-row">
                 <span>Mathematics</span>
                 <span>Economics</span>
                 <span>Commerce</span>
-                <span>Theoretical Foundation</span>
+                <span>Theory Foundation</span>
               </div>
             </div>
           </article>
-        </div>
-
-        <div class="image-note reveal">
-          <strong>Adding education images:</strong> every degree card already contains a dedicated image block.
-          Uncomment the sample <code>&lt;img&gt;</code> line in that card and place the corresponding file inside an
-          <code>images/</code> folder. The image will automatically fill the left panel.
         </div>
       </div>
     </section>
 
     <!-- RESEARCH -->
-    <section class="section" id="research">
+    <section id="research" class="section section-soft">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="section-head">
           <div>
-            <div class="eyebrow">02 · Research</div>
-            <h2>Learning when incentives matter.</h2>
+            <p class="section-index">02 · Research</p>
+            <h2>Learning when incentives matter</h2>
           </div>
-          <p>
-            My central research question is how to design learning systems that remain effective when
-            participants are strategic, information is incomplete, and the system must learn while making decisions.
+          <p class="section-intro">
+            My central research question is how to design learning systems that
+            remain effective when participants are strategic, information is
+            incomplete, and the system must learn while making decisions.
           </p>
         </div>
 
-        <div class="research-grid">
-          <article class="research-card primary reveal">
-            <div class="card-index">PRIMARY RESEARCH DIRECTION</div>
+        <article class="research-feature">
+          <div class="feature-label">Primary research direction</div>
+          <div class="feature-copy">
             <h3>Mechanism Design in Machine Learning</h3>
             <p>
-              I study incentive structures in machine-learning environments: how the behavior of agents changes
-              what a learner observes, what can be inferred from data, and how a platform should design payments,
+              I study incentive structures in machine-learning environments: how
+              the behavior of agents changes what a learner observes, what can be
+              inferred from data, and how a platform should design payments,
               contracts, or allocation rules to obtain desirable outcomes.
             </p>
-            <div class="research-tags">
-              <span>GAME THEORY</span>
-              <span>MECHANISM DESIGN</span>
-              <span>INCENTIVES</span>
-              <span>STRATEGIC ML</span>
-            </div>
-          </article>
+          </div>
+          <div class="feature-tags">
+            <span>Game Theory</span>
+            <span>Mechanism Design</span>
+            <span>Incentives</span>
+            <span>Strategic ML</span>
+          </div>
+        </article>
 
-          <article class="research-card reveal">
-            <div class="card-index">01</div>
+        <div class="research-grid">
+          <article class="research-card">
+            <span class="card-number">01</span>
             <h3>Online Learning &amp; Bandits</h3>
             <p>
-              Exploration–exploitation trade-offs, partial feedback, confidence-based learning, and finite-sample
-              guarantees for sequential decision problems.
+              Exploration–exploitation trade-offs, partial feedback,
+              confidence-based learning, and finite-sample guarantees for
+              sequential decision problems.
             </p>
-            <div class="research-tags">
-              <span>UCB</span><span>BEST-ARM IDENTIFICATION</span><span>REGRET</span>
+            <div class="tag-row">
+              <span>UCB</span>
+              <span>Best-arm Identification</span>
+              <span>Regret</span>
             </div>
           </article>
 
-          <article class="research-card reveal">
-            <div class="card-index">02</div>
+          <article class="research-card">
+            <span class="card-number">02</span>
             <h3>LLM Routing &amp; Contracts</h3>
             <p>
-              Learning how a platform can induce the right model through a contract when model qualities are initially
-              unknown and actions are selected by a self-interested agent rather than directly by the platform.
+              Learning how a platform can induce the right model through a
+              contract when model qualities are initially unknown and actions are
+              selected by a self-interested agent.
             </p>
-            <div class="research-tags">
-              <span>LLMs</span><span>CONTRACTS</span><span>PRINCIPAL–AGENT</span>
+            <div class="tag-row">
+              <span>LLMs</span>
+              <span>Contracts</span>
+              <span>Principal–Agent</span>
             </div>
           </article>
 
-          <article class="research-card reveal">
-            <div class="card-index">03</div>
+          <article class="research-card">
+            <span class="card-number">03</span>
             <h3>Incentive-aware AI Systems</h3>
             <p>
-              More broadly, I am interested in intelligent, fair, and efficient learning mechanisms that connect
+              Intelligent, fair, and efficient learning mechanisms connecting
               theoretical analysis with data-driven decision systems.
             </p>
-            <div class="research-tags">
-              <span>AI</span><span>OPTIMIZATION</span><span>DECISION SYSTEMS</span>
+            <div class="tag-row">
+              <span>AI</span>
+              <span>Optimization</span>
+              <span>Decision Systems</span>
             </div>
           </article>
 
-          <article class="research-card reveal">
-            <div class="card-index">04</div>
+          <article class="research-card">
+            <span class="card-number">04</span>
             <h3>Federated Learning &amp; Incentives</h3>
             <p>
-              Strategic participation, free-riding, fairness, privacy, and robust aggregation in decentralized
-              learning systems where clients can have heterogeneous objectives and behavior.
+              Strategic participation, free-riding, fairness, privacy, and robust
+              aggregation in decentralized learning systems with heterogeneous clients.
             </p>
-            <div class="research-tags">
-              <span>FEDERATED LEARNING</span><span>GAME THEORY</span><span>FAIRNESS</span>
+            <div class="tag-row">
+              <span>Federated Learning</span>
+              <span>Game Theory</span>
+              <span>Fairness</span>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE / TEACHING -->
-    <section class="section experience-section" id="experience">
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="section-head">
           <div>
-            <div class="eyebrow">03 · Academic Experience</div>
-            <h2>Teaching &amp; academic visits.</h2>
+            <p class="section-index">03 · Academic Experience</p>
+            <h2>Teaching &amp; academic visits</h2>
           </div>
-          <p>
-            Alongside research, I have worked as a teaching assistant, instructor, and visiting scholar across
-            computer science, probability, statistics, data science, and machine learning.
+          <p class="section-intro">
+            Alongside research, I have worked as a teaching assistant, instructor,
+            and visiting scholar across computer science, probability, statistics,
+            data science, and machine learning.
           </p>
         </div>
 
-        <div class="experience-grid">
-          <div class="experience-column reveal">
-            <h3>Teaching</h3>
+        <div class="experience-columns">
+          <div class="experience-block">
+            <h3 class="subsection-title">Teaching</h3>
 
-            <div class="exp-item">
-              <div class="exp-date">Aug–Nov 2026</div>
-              <div>
-                <strong>Teaching Assistant · CS620 Incentive in Machine Learning</strong>
-                <p>CSE / AI, IIT Gandhinagar</p>
-              </div>
-            </div>
+            <div class="timeline-list">
+              <article class="timeline-row">
+                <span class="timeline-date">Aug–Nov 2026</span>
+                <div>
+                  <h4>Teaching Assistant · CS620 Incentive in Machine Learning</h4>
+                  <p>CSE / AI · IIT Gandhinagar</p>
+                </div>
+              </article>
 
-            <div class="exp-item">
-              <div class="exp-date">Jan–Apr 2026</div>
-              <div>
-                <strong>Teaching Assistant · ES114</strong>
-                <p>Probability, Statistics, and Data Visualization · IIT Gandhinagar</p>
-              </div>
-            </div>
+              <article class="timeline-row">
+                <span class="timeline-date">Jan–Apr 2026</span>
+                <div>
+                  <h4>Teaching Assistant · ES114</h4>
+                  <p>Probability, Statistics, and Data Visualization · IIT Gandhinagar</p>
+                </div>
+              </article>
 
-            <div class="exp-item">
-              <div class="exp-date">Aug–Nov 2025</div>
-              <div>
-                <strong>Teaching Assistant · ES112 Computing</strong>
-                <p>CSE / AI, IIT Gandhinagar</p>
-              </div>
-            </div>
+              <article class="timeline-row">
+                <span class="timeline-date">Aug–Nov 2025</span>
+                <div>
+                  <h4>Teaching Assistant · ES112 Computing</h4>
+                  <p>CSE / AI · IIT Gandhinagar</p>
+                </div>
+              </article>
 
-            <div class="exp-item">
-              <div class="exp-date">May–Jun 2025</div>
-              <div>
-                <strong>Instructor · ML, AI &amp; Data Science</strong>
-                <p>NIELIT Patna</p>
-              </div>
+              <article class="timeline-row">
+                <span class="timeline-date">May–Jun 2025</span>
+                <div>
+                  <h4>Instructor · ML, AI &amp; Data Science</h4>
+                  <p>NIELIT Patna</p>
+                </div>
+              </article>
             </div>
           </div>
 
-          <div class="experience-column reveal">
-            <h3>Academic Visits &amp; Research Training</h3>
+          <div class="experience-block">
+            <h3 class="subsection-title">Academic visits &amp; research training</h3>
 
-            <div class="exp-item">
-              <div class="exp-date">2025—</div>
-              <div>
-                <strong>Start Early Ph.D. Research Fellow</strong>
-                <p>Computer Science &amp; Engineering · IIT Gandhinagar</p>
-              </div>
-            </div>
+            <div class="timeline-list">
+              <article class="timeline-row">
+                <span class="timeline-date">2025—</span>
+                <div>
+                  <h4>Start Early Ph.D. Research Fellow</h4>
+                  <p>Computer Science &amp; Engineering · IIT Gandhinagar</p>
+                </div>
+              </article>
 
-            <div class="exp-item">
-              <div class="exp-date">Spring 2025</div>
-              <div>
-                <strong>Visiting Postgraduate Scholar</strong>
-                <p>NIELIT Patna</p>
-              </div>
-            </div>
+              <article class="timeline-row">
+                <span class="timeline-date">Spring 2025</span>
+                <div>
+                  <h4>Visiting Postgraduate Scholar</h4>
+                  <p>NIELIT Patna</p>
+                </div>
+              </article>
 
-            <div class="exp-item">
-              <div class="exp-date">Summer 2024</div>
-              <div>
-                <strong>Visiting Undergraduate Scholar</strong>
-                <p>IIT Gandhinagar</p>
-              </div>
+              <article class="timeline-row">
+                <span class="timeline-date">Summer 2024</span>
+                <div>
+                  <h4>Visiting Undergraduate Scholar</h4>
+                  <p>IIT Gandhinagar</p>
+                </div>
+              </article>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SELECTED WORK -->
-    <section class="section" id="work">
+    <!-- WORK -->
+    <section id="work" class="section section-soft">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="section-head">
           <div>
-            <div class="eyebrow">04 · Selected Work</div>
-            <h2>Research &amp; projects.</h2>
+            <p class="section-index">04 · Selected Work</p>
+            <h2>Research &amp; projects</h2>
           </div>
-          <p>
-            Selected current research directions together with earlier machine-learning and software projects.
+          <p class="section-intro">
+            Selected current research directions together with earlier
+            machine-learning and software projects.
           </p>
         </div>
 
-        <div class="work-stack">
-          <article class="work-item reveal">
-            <div class="work-number">01</div>
-            <div>
-              <h3>Online Linear Contract Learning for Adaptive LLM Selection</h3>
-              <p>
-                Online principal–agent learning for LLM routing: learning a near-optimal linear contract when the
-                platform cannot directly select the LLM and model qualities are only learned through interaction.
-              </p>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-meta">
+              <span>01</span>
+              <span>Current research</span>
             </div>
-            <div class="work-type">CURRENT RESEARCH</div>
+            <h3>Online Linear Contract Learning for Adaptive LLM Selection</h3>
+            <p>
+              Online principal–agent learning for LLM routing: learning a
+              near-optimal linear contract when the platform cannot directly
+              select the LLM and model qualities are learned through interaction.
+            </p>
           </article>
 
-          <article class="work-item reveal">
-            <div class="work-number">02</div>
-            <div>
-              <h3>Federated Learning, Fairness &amp; Incentives</h3>
-              <p>
-                Research on heterogeneous and strategic clients, incentive mechanisms, fairness objectives,
-                privacy-sensitive statistics, and robust aggregation in federated learning.
-              </p>
+          <article class="project-card">
+            <div class="project-meta">
+              <span>02</span>
+              <span>Research</span>
             </div>
-            <div class="work-type">RESEARCH</div>
+            <h3>Federated Learning, Fairness &amp; Incentives</h3>
+            <p>
+              Research on heterogeneous and strategic clients, incentive
+              mechanisms, fairness objectives, privacy-sensitive statistics, and
+              robust aggregation in federated learning.
+            </p>
           </article>
 
-          <article class="work-item reveal">
-            <div class="work-number">03</div>
-            <div>
-              <h3>DataEaze</h3>
-              <p>
-                A no-code machine-learning and data-analysis platform designed to support preprocessing, feature
-                selection, model building, evaluation, and visualization for users without extensive programming experience.
-              </p>
+          <article class="project-card">
+            <div class="project-meta">
+              <span>03</span>
+              <span>ML platform</span>
             </div>
-            <div class="work-type">ML PLATFORM</div>
+            <h3>DataEaze</h3>
+            <p>
+              A no-code machine-learning and data-analysis platform supporting
+              preprocessing, feature selection, model building, evaluation, and
+              visualization for users without extensive programming experience.
+            </p>
           </article>
 
-          <article class="work-item reveal">
-            <div class="work-number">04</div>
-            <div>
-              <h3>Earlier Software &amp; AI Projects</h3>
-              <p>
-                Earlier work includes movie-booking applications, sentiment analysis, an educational mathematics game,
-                and a generative-AI project for programming education.
-              </p>
+          <article class="project-card">
+            <div class="project-meta">
+              <span>04</span>
+              <span>Selected projects</span>
             </div>
-            <div class="work-type">SELECTED PROJECTS</div>
+            <h3>Earlier Software &amp; AI Projects</h3>
+            <p>
+              Earlier work includes movie-booking applications, sentiment
+              analysis, an educational mathematics game, and a generative-AI
+              project for programming education.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
     <!-- MILESTONES -->
-    <section class="section milestones-section" id="milestones">
+    <section id="milestones" class="section">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="section-head">
           <div>
-            <div class="eyebrow">05 · Milestones</div>
-            <h2>Recent updates &amp; achievements.</h2>
+            <p class="section-index">05 · Milestones</p>
+            <h2>Recent updates &amp; achievements</h2>
           </div>
-          <p>
-            A chronological view of academic milestones, national examinations, fellowships, awards, and training selections.
+          <p class="section-intro">
+            A chronological view of academic milestones, national examinations,
+            fellowships, awards, and training selections.
           </p>
         </div>
 
-        <div class="milestone-grid">
-          <a class="milestone reveal" href="https://www.youtube.com/live/e6p_l44IxlU?si=OMQI3lF2x8QJC7eK&t=7065" target="_blank" rel="noreferrer">
-            <time>JUNE 2026</time>
+        <div class="milestone-list">
+          <article class="milestone-item">
+            <time>June 2026</time>
             <div>
-              <strong>Awarded the B.S. degree in Data Science &amp; Applications</strong>
-              <small>IIT Madras convocation.</small>
-              <div class="external">View ↗</div>
+              <h3>Awarded the B.S. degree in Data Science &amp; Applications</h3>
+              <p>IIT Madras convocation.</p>
             </div>
-          </a>
+          </article>
 
-          <div class="milestone reveal">
-            <time>MAY 2026</time>
+          <article class="milestone-item">
+            <time>May 2026</time>
             <div>
-              <strong>Successfully defended Ph.D. Research Proposal</strong>
-              <small>Computer Science &amp; Engineering, IIT Gandhinagar.</small>
+              <h3>Successfully defended Ph.D. Research Proposal</h3>
+              <p>Computer Science &amp; Engineering · IIT Gandhinagar.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="milestone reveal">
-            <time>DECEMBER 2025</time>
+          <article class="milestone-item">
+            <time>December 2025</time>
             <div>
-              <strong>Completed Ph.D. qualifying examination</strong>
-              <small>IIT Gandhinagar.</small>
+              <h3>Completed Ph.D. qualifying examination</h3>
+              <p>IIT Gandhinagar.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="milestone reveal">
-            <time>JUNE 2025</time>
+          <article class="milestone-item">
+            <time>June 2025</time>
             <div>
-              <strong>Rank 1 in M.Sc. with 9.55 CGPA</strong>
-              <small>Department of Statistics, Central University of South Bihar.</small>
+              <h3>Rank 1 in M.Sc. with 9.55 CGPA</h3>
+              <p>Department of Statistics · Central University of South Bihar.</p>
             </div>
-          </div>
+          </article>
 
-          <a class="milestone reveal" href="https://nptel.ac.in/nptelstars/motivatedlearners" target="_blank" rel="noreferrer">
-            <time>MAY 2025</time>
+          <article class="milestone-item">
+            <time>May 2025</time>
             <div>
-              <strong>Recognised as an NPTEL Star / Motivated Learner</strong>
-              <small>Invited for the Star Award Felicitation at IIT Kharagpur.</small>
-              <div class="external">View ↗</div>
+              <h3>Recognised as an NPTEL Star / Motivated Learner</h3>
+              <p>Invited for the Star Award Felicitation at IIT Kharagpur.</p>
             </div>
-          </a>
+          </article>
 
-          <a class="milestone reveal" href="https://www.cusb.ac.in/index.php?Itemid=620&catid=57&id=687%3Aover-50-students-from-various-departments-of-cusb-qualified-for-gate-2025&option=com_content&view=article" target="_blank" rel="noreferrer">
-            <time>MARCH 2025</time>
+          <article class="milestone-item">
+            <time>March 2025</time>
             <div>
-              <strong>Qualified GATE 2025 in Data Science &amp; Artificial Intelligence</strong>
-              <small>Approximately 99 percentile; CUSB also featured the result.</small>
-              <div class="external">View ↗</div>
+              <h3>Qualified GATE 2025 in Data Science &amp; Artificial Intelligence</h3>
+              <p>Approximately 99 percentile.</p>
             </div>
-          </a>
+          </article>
 
-          <a class="milestone reveal" href="https://www.meity.gov.in/" target="_blank" rel="noreferrer">
-            <time>FEBRUARY 2025</time>
+          <article class="milestone-item">
+            <time>February 2025</time>
             <div>
-              <strong>Selected for a MeitY-sponsored internship</strong>
-              <small>NIELIT Patna.</small>
-              <div class="external">MeitY ↗</div>
+              <h3>Selected for a MeitY-sponsored internship</h3>
+              <p>NIELIT Patna.</p>
             </div>
-          </a>
+          </article>
 
-          <a class="milestone reveal" href="https://drive.google.com/file/d/1uuGOhUG_l1PXZbq8plpixRCumXKdYAtV/view?usp=sharing" target="_blank" rel="noreferrer">
-            <time>DECEMBER 2024</time>
+          <article class="milestone-item">
+            <time>December 2024</time>
             <div>
-              <strong>Received Start Early Fellowship offer for Ph.D.</strong>
-              <small>IIT Gandhinagar.</small>
-              <div class="external">View ↗</div>
+              <h3>Received Start Early Fellowship offer for Ph.D.</h3>
+              <p>IIT Gandhinagar.</p>
             </div>
-          </a>
+          </article>
 
-          <a class="milestone reveal" href="https://youtu.be/Y0g2b3J8hXM?si=j49SqwjhG3Vkfgus&t=1729" target="_blank" rel="noreferrer">
-            <time>MAY 2024</time>
+          <article class="milestone-item">
+            <time>May 2024</time>
             <div>
-              <strong>Awarded Double Diplomas in Programming &amp; Data Science</strong>
-              <small>IIT Madras.</small>
-              <div class="external">Watch ↗</div>
+              <h3>Awarded Double Diplomas in Programming &amp; Data Science</h3>
+              <p>IIT Madras.</p>
             </div>
-          </a>
+          </article>
 
-          <a class="milestone reveal" href="https://study.iitm.ac.in/student-achievements/projects/BDM%20Capstone/2022/May%20Term%202022" target="_blank" rel="noreferrer">
-            <time>MAY 2022</time>
+          <article class="milestone-item">
+            <time>May 2022</time>
             <div>
-              <strong>Best Project Award</strong>
-              <small>Business Data Management, IIT Madras.</small>
-              <div class="external">View ↗</div>
+              <h3>Best Project Award</h3>
+              <p>Business Data Management · IIT Madras.</p>
             </div>
-          </a>
+          </article>
 
-          <a class="milestone reveal" href="https://mtts.org.in/" target="_blank" rel="noreferrer">
-            <time>AUGUST 2021</time>
+          <article class="milestone-item">
+            <time>August 2021</time>
             <div>
-              <strong>Selected for Mathematics Training and Talent Search (MTTS)</strong>
-              <small>National-level mathematics training programme.</small>
-              <div class="external">MTTS ↗</div>
+              <h3>Selected for Mathematics Training and Talent Search (MTTS)</h3>
+              <p>National-level mathematics training programme.</p>
             </div>
-          </a>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section class="section" id="about">
-      <div class="container about-grid">
-        <div class="about-sticky reveal">
-          <div class="eyebrow">06 · About</div>
-          <h2>From mathematics to strategic AI.</h2>
+    <section id="about" class="section section-soft">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-index">06 · About</p>
+            <h2>From mathematics to strategic AI</h2>
+          </div>
         </div>
 
-        <div class="about-copy reveal">
-          <p>
-            My academic path has moved through <strong>mathematics, statistics, data science, and computer science</strong>.
-            This combination has shaped my interest in problems where mathematical structure and learning interact with
-            economic incentives and strategic behavior.
-          </p>
-          <p>
-            My core technical background is in <strong>Machine Learning and Deep Learning</strong>, with interests in
-            algorithm design, optimization, and data-driven decision systems. I am particularly interested in building
-            intelligent mechanisms that connect theoretical guarantees with practical AI systems.
-          </p>
-          <p>
-            Before beginning my Ph.D., I was a <strong>visiting undergraduate scholar at IIT Gandhinagar</strong> in
-            summer 2024 and a <strong>visiting postgraduate scholar at NIELIT Patna</strong> in spring 2025.
-          </p>
-          <p>
-            Languages: <strong>Magadhi, Hindi, and English</strong>.
-          </p>
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>
+              My academic path has moved through mathematics, statistics, data
+              science, and computer science. This combination has shaped my
+              interest in problems where mathematical structure and learning
+              interact with economic incentives and strategic behavior.
+            </p>
 
-          <div class="personal-note">
-            <strong>About the name “Hari Prapan”</strong>
-            The original personal website also records the Sanskrit interpretation of the name as one who has taken
-            refuge in Hari (Vishnu), together with a reference to Bhagavad Gita 18.66. I have kept this note here near
-            the end so that the homepage remains primarily academic while preserving that personal detail.
+            <p>
+              My core technical background is in Machine Learning and Deep
+              Learning, with interests in algorithm design, optimization, and
+              data-driven decision systems. I am particularly interested in
+              intelligent mechanisms that connect theoretical guarantees with
+              practical AI systems.
+            </p>
+
+            <p>
+              Before beginning my Ph.D., I was a visiting undergraduate scholar
+              at IIT Gandhinagar in summer 2024 and a visiting postgraduate
+              scholar at NIELIT Patna in spring 2025.
+            </p>
           </div>
+
+          <aside class="about-card">
+            <div>
+              <span>Languages</span>
+              <strong>Magadhi · Hindi · English</strong>
+            </div>
+            <div>
+              <span>Current institution</span>
+              <strong>IIT Gandhinagar</strong>
+            </div>
+            <div>
+              <span>Research focus</span>
+              <strong>Mechanism Design + Machine Learning</strong>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section class="section contact-section" id="contact">
+    <section id="contact" class="contact-section">
       <div class="container">
-        <div class="contact-card reveal">
+        <div class="contact-panel">
           <div>
-            <div class="eyebrow" style="color:#9ca9c1">07 · Contact</div>
-            <h2>Research, collaboration, or a good question?</h2>
-            <p>
-              I am happy to connect around mechanism design, online learning, bandits, LLM economics,
-              strategic machine learning, and related research problems.
+            <p class="section-index light">07 · Contact</p>
+            <h2>Research, collaboration,<br />or a good question?</h2>
+            <p class="contact-copy">
+              I am happy to connect around mechanism design, online learning,
+              bandits, LLM economics, strategic machine learning, and related
+              research problems.
             </p>
           </div>
 
           <div class="contact-links">
-            <a class="contact-link" href="mailto:hari.prapan@iitgn.ac.in">
-              <span>hari.prapan@iitgn.ac.in</span><span>↗</span>
+            <a href="mailto:hari.prapan@iitgn.ac.in">
+              <span>Email</span>
+              <strong>hari.prapan@iitgn.ac.in ↗</strong>
             </a>
-            <a class="contact-link" href="mailto:hari.prapan@zohomail.in">
-              <span>hari.prapan@zohomail.in</span><span>↗</span>
+
+            <a href="https://www.linkedin.com/in/hariprapan/" target="_blank" rel="noreferrer">
+              <span>LinkedIn</span>
+              <strong>Connect ↗</strong>
             </a>
-            <a class="contact-link" href="mailto:hari.prapan@alumni.iitm.ac.in">
-              <span>hari.prapan@alumni.iitm.ac.in</span><span>↗</span>
+
+            <a href="https://github.com/HariPrapan" target="_blank" rel="noreferrer">
+              <span>GitHub</span>
+              <strong>HariPrapan ↗</strong>
             </a>
-            <a class="contact-link" href="https://www.linkedin.com/in/hariprapan/" target="_blank" rel="noreferrer">
-              <span>LinkedIn</span><span>↗</span>
-            </a>
-            <a class="contact-link" href="https://github.com/HariPrapan" target="_blank" rel="noreferrer">
-              <span>GitHub</span><span>↗</span>
-            </a>
-            <a class="contact-link" href="https://aratt.ai/user/@h_prapan01" target="_blank" rel="noreferrer">
-              <span>Arattai · @h_prapan01</span><span>↗</span>
+
+            <a href="https://sites.google.com/view/hariprapan/" target="_blank" rel="noreferrer">
+              <span>Academic page</span>
+              <strong>Visit ↗</strong>
             </a>
           </div>
         </div>
@@ -1657,45 +745,11 @@
     </section>
   </main>
 
-  <footer>
-    <span>© <span id="year"></span> Hari Prapan</span>
-    <span>Academic portfolio · built as a single self-contained HTML file</span>
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>© 2026 Hari Prapan</span>
+      <a href="#home">Back to top ↑</a>
+    </div>
   </footer>
-
-  <script>
-    // Mobile navigation
-    const siteNav = document.getElementById("siteNav");
-    const menuBtn = document.getElementById("menuBtn");
-
-    menuBtn.addEventListener("click", () => {
-      const isOpen = siteNav.classList.toggle("open");
-      menuBtn.setAttribute("aria-expanded", String(isOpen));
-    });
-
-    document.querySelectorAll(".nav-links a").forEach((link) => {
-      link.addEventListener("click", () => {
-        siteNav.classList.remove("open");
-        menuBtn.setAttribute("aria-expanded", "false");
-      });
-    });
-
-    // Light scroll-reveal animation
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.08 }
-    );
-
-    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-
-    // Footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
