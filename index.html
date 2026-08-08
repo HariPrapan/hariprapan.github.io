@@ -18,7 +18,185 @@
 
   <link rel="stylesheet" href="style.css" />
 </head>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
+  const sliders =
+    document.querySelectorAll(".edu-slider");
+
+
+  sliders.forEach((slider, sliderIndex) => {
+
+    const slides =
+      slider.querySelectorAll(".edu-slide");
+
+    const dotsContainer =
+      slider.querySelector(".edu-dots");
+
+
+    /* If only one image exists,
+       no slideshow is necessary.
+    */
+
+    if (slides.length <= 1) {
+      return;
+    }
+
+
+    let currentSlide = 0;
+
+    let timer;
+
+
+    /* -----------------------------------------
+       CREATE DOTS
+       ----------------------------------------- */
+
+    slides.forEach((slide, index) => {
+
+      const dot =
+        document.createElement("button");
+
+      dot.classList.add("edu-dot");
+
+      dot.type = "button";
+
+      dot.setAttribute(
+        "aria-label",
+        "Show image " + (index + 1)
+      );
+
+
+      if (index === 0) {
+        dot.classList.add("active");
+      }
+
+
+      dot.addEventListener("click", function () {
+
+        showSlide(index);
+
+        restartTimer();
+
+      });
+
+
+      dotsContainer.appendChild(dot);
+
+    });
+
+
+    const dots =
+      dotsContainer.querySelectorAll(".edu-dot");
+
+
+
+    /* -----------------------------------------
+       SHOW SPECIFIC SLIDE
+       ----------------------------------------- */
+
+    function showSlide(index) {
+
+      slides[currentSlide]
+        .classList.remove("active");
+
+      dots[currentSlide]
+        .classList.remove("active");
+
+
+      currentSlide = index;
+
+
+      slides[currentSlide]
+        .classList.add("active");
+
+      dots[currentSlide]
+        .classList.add("active");
+
+    }
+
+
+
+    /* -----------------------------------------
+       NEXT IMAGE
+       ----------------------------------------- */
+
+    function nextSlide() {
+
+      const next =
+        (currentSlide + 1) % slides.length;
+
+      showSlide(next);
+
+    }
+
+
+
+    /* -----------------------------------------
+       AUTO PLAY
+
+       6000 = image stays for 6 seconds.
+       Change to 7000 or 8000 if you
+       want it even slower.
+       ----------------------------------------- */
+
+    function startTimer() {
+
+      timer =
+        setInterval(nextSlide, 6000);
+
+    }
+
+
+
+    function restartTimer() {
+
+      clearInterval(timer);
+
+      startTimer();
+
+    }
+
+
+
+    /* -----------------------------------------
+       PAUSE WHEN USER HOVERS
+       ----------------------------------------- */
+
+    slider.addEventListener(
+      "mouseenter",
+      function () {
+        clearInterval(timer);
+      }
+    );
+
+
+    slider.addEventListener(
+      "mouseleave",
+      function () {
+        startTimer();
+      }
+    );
+
+
+
+    /*
+      Slightly offset each card so that
+      all four cards do not change image
+      at exactly the same instant.
+
+      This makes the website feel calmer.
+    */
+
+    setTimeout(
+      startTimer,
+      sliderIndex * 900
+    );
+
+  });
+
+});
+</script>
 <body>
   <header class="site-header">
     <div class="nav-shell">
