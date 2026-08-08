@@ -414,120 +414,293 @@ h4 {
   line-height: 1.45;
 }
 
-/* ---------- EDUCATION ---------- */
+/* =========================================================
+   EDUCATION
+   ========================================================= */
 
-.education-stack {
+.education-grid {
   display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
   gap: 24px;
 }
 
+
+/* ---------- EDUCATION CARD ---------- */
+
 .education-card {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
   overflow: hidden;
 
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
 
   background: var(--surface);
+
   box-shadow: var(--shadow-sm);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
-/* Landscape image area */
-.edu-visual {
+
+.education-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #cbd1d8;
+
+  box-shadow: var(--shadow-md);
+}
+
+
+
+/* =========================================================
+   IMAGE SLIDER
+   ========================================================= */
+
+.edu-slider {
   position: relative;
+
   width: 100%;
 
-  aspect-ratio: 16 / 6.5;
+  /*
+     Landscape ratio.
+
+     16 / 8 gives enough height for campus photographs
+     without making the card excessively tall.
+  */
+
+  aspect-ratio: 16 / 8;
 
   overflow: hidden;
 
-  background: linear-gradient(
-    145deg,
-    #e7ebf0,
-    #d8dee6
-  );
+  background: #e5e9ee;
 }
 
-.edu-visual img {
+
+/* container for slides */
+
+.edu-slides {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+
+/* individual image */
+
+.edu-slide {
+  position: absolute;
+
+  inset: 0;
+
   width: 100%;
   height: 100%;
 
   object-fit: cover;
   object-position: center;
 
-  display: block;
+  opacity: 0;
+
+  /*
+     Slow smooth cross fade
+  */
+
+  transition:
+    opacity 1.5s ease-in-out,
+    transform 7s ease;
+
+  transform: scale(1);
 }
 
-/* Institution label over image */
+
+/* active image */
+
+.edu-slide.active {
+  opacity: 1;
+
+  /*
+     Very subtle cinematic zoom
+  */
+
+  transform: scale(1.035);
+}
+
+
+
+/* =========================================================
+   IMAGE OVERLAY
+   Makes text on photos readable
+   ========================================================= */
+
+.edu-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(10, 20, 35, 0.48) 0%,
+      rgba(10, 20, 35, 0.08) 38%,
+      rgba(10, 20, 35, 0) 65%
+    );
+}
+
+
+
+/* =========================================================
+   INSTITUTION NAME
+   ========================================================= */
+
 .edu-monogram {
   position: absolute;
-  left: 24px;
-  bottom: 20px;
 
-  padding: 8px 12px;
+  z-index: 4;
 
-  border-radius: 9px;
+  left: 20px;
+  bottom: 18px;
 
-  background: rgba(21, 35, 59, 0.88);
+  padding: 7px 11px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.2);
+
+  border-radius: 8px;
+
+  background:
+    rgba(15, 29, 49, 0.78);
+
+  backdrop-filter: blur(8px);
 
   color: #fff;
 
   font-family: var(--font-display);
-  font-size: 0.82rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
 
-  backdrop-filter: blur(8px);
+  font-size: 0.78rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
 }
 
-/* If image is missing */
-.image-missing .edu-monogram {
-  left: 50%;
-  bottom: 50%;
 
-  transform: translate(-50%, 50%);
+
+/* =========================================================
+   SLIDER DOTS
+   ========================================================= */
+
+.edu-dots {
+  position: absolute;
+
+  z-index: 4;
+
+  right: 18px;
+  bottom: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+
+.edu-dot {
+  width: 6px;
+  height: 6px;
 
   padding: 0;
 
-  background: transparent;
-  backdrop-filter: none;
+  border: 0;
 
-  color: var(--navy);
+  border-radius: 999px;
 
-  font-size: 2.3rem;
+  background:
+    rgba(255, 255, 255, 0.45);
+
+  cursor: pointer;
+
+  transition:
+    width 0.3s ease,
+    background 0.3s ease;
 }
 
-/* Content below image */
+
+.edu-dot.active {
+  width: 19px;
+
+  background: #fff;
+}
+
+
+
+/* =========================================================
+   EDUCATION CONTENT
+   ========================================================= */
+
 .edu-content {
-  padding: 30px 34px 32px;
+  display: flex;
+
+  flex: 1;
+
+  flex-direction: column;
+
+  padding: 27px 28px 28px;
 }
+
 
 .edu-topline {
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
-  gap: 20px;
+  gap: 15px;
 
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
+
 
 .edu-topline a {
   color: var(--muted);
 
-  font-size: 0.84rem;
+  font-size: 0.8rem;
+
   font-weight: 700;
 
   transition: color 0.2s ease;
 }
 
+
 .edu-topline a:hover {
   color: var(--ink);
 }
 
+
+
+/* ---------- DATE ---------- */
+
 .date-pill {
-  padding: 5px 10px;
+  flex-shrink: 0;
+
+  padding: 5px 9px;
 
   border-radius: 999px;
 
@@ -535,72 +708,116 @@ h4 {
 
   color: #7c542d;
 
-  font-size: 0.75rem;
+  font-size: 0.71rem;
+
   font-weight: 800;
 }
+
+
+
+/* ---------- DEGREE ---------- */
 
 .edu-content h3 {
   margin-bottom: 14px;
 
-  font-size: 1.55rem;
-  line-height: 1.3;
+  font-size: 1.35rem;
+
+  line-height: 1.35;
 }
 
-.edu-content p {
-  max-width: 900px;
 
-  margin-bottom: 13px;
+
+/* ---------- DESCRIPTION ---------- */
+
+.edu-content p {
+  margin-bottom: 12px;
 
   color: var(--muted);
 
-  line-height: 1.75;
+  font-size: 0.94rem;
+
+  line-height: 1.72;
 }
+
+
+
+/* Push tags to same general area at card bottom */
 
 .edu-content .tag-row {
-  margin-top: 20px;
+  margin-top: auto;
+
+  padding-top: 12px;
 }
 
 
-/* ---------- EDUCATION RESPONSIVE ---------- */
 
-@media (max-width: 860px) {
+/* =========================================================
+   TABLET
+   ========================================================= */
 
-  .edu-visual {
-    aspect-ratio: 16 / 8;
+@media (max-width: 900px) {
+
+  .education-grid {
+    grid-template-columns: 1fr;
   }
 
-  .edu-content {
-    padding: 26px 25px 28px;
+
+  .edu-slider {
+    aspect-ratio: 16 / 7;
   }
+
 }
+
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media (max-width: 600px) {
 
-  .education-stack {
+  .education-grid {
     gap: 18px;
   }
 
-  .edu-visual {
+
+  .edu-slider {
     aspect-ratio: 16 / 9;
   }
 
+
   .edu-content {
-    padding: 22px 20px 24px;
+    padding:
+      22px 20px 23px;
   }
+
 
   .edu-topline {
     align-items: flex-start;
+
     flex-direction: column;
 
-    gap: 10px;
+    gap: 8px;
   }
+
+
+  .edu-content h3 {
+    font-size: 1.25rem;
+  }
+
 
   .edu-monogram {
-    left: 16px;
+    left: 15px;
     bottom: 14px;
   }
-}
 
+
+  .edu-dots {
+    right: 15px;
+    bottom: 17px;
+  }
+
+}
 /* ---------- RESEARCH ---------- */
 
 .research-feature {
