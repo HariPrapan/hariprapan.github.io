@@ -9,5 +9,229 @@
 .contact-section{padding:88px 0 70px}.contact-panel{display:grid;grid-template-columns:1fr 420px;gap:60px;padding:52px;border-radius:30px;background:var(--navy)}.contact-panel h2{color:#fff}.contact-copy{color:rgba(255,255,255,.7)}.contact-links{display:grid;gap:10px}.contact-links a{display:flex;justify-content:space-between;gap:14px;padding:15px 17px;border:1px solid rgba(255,255,255,.14);border-radius:12px;color:#fff}.contact-links span{color:rgba(255,255,255,.55);font-size:.78rem}.contact-links strong{font-size:.84rem}.site-footer{padding:0 0 30px}.footer-row{display:flex;justify-content:space-between;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
 .page-hero{padding:70px 0 62px;border-bottom:1px solid var(--line)}.page-hero h1{font-size:clamp(3.2rem,7vw,6.2rem);line-height:.98;letter-spacing:-.05em;margin:8px 0 20px}.page-hero p:last-child{max-width:800px;color:var(--muted);font-size:1.05rem}.research-feature{display:grid;grid-template-columns:200px 1fr;gap:36px;padding:34px;margin-bottom:20px;border-radius:var(--radius);background:var(--navy);color:#fff}.research-feature .feature-label{color:#e2bc92;font-family:var(--display);font-size:.74rem;font-weight:800;text-transform:uppercase}.research-feature h3{color:#fff;font-size:1.6rem}.research-feature p{color:rgba(255,255,255,.72);margin:0}
 .education-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.education-card{display:flex;flex-direction:column;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:var(--radius)}.edu-slider{position:relative;aspect-ratio:16/8;overflow:hidden;background:#e5e9ee}.edu-slides,.edu-slide{position:absolute;inset:0;width:100%;height:100%}.edu-slide{object-fit:cover;opacity:0;transition:opacity 1.5s ease,transform 7s ease}.edu-slide.active{opacity:1;transform:scale(1.035)}.edu-image-overlay{position:absolute;inset:0;z-index:2;background:linear-gradient(to top,rgba(10,20,35,.5),transparent 65%)}.edu-monogram{position:absolute;z-index:3;left:20px;bottom:18px;padding:7px 11px;border-radius:8px;background:rgba(15,29,49,.8);color:#fff;font-family:var(--display);font-size:.78rem;font-weight:800}.edu-dots{position:absolute;z-index:4;right:18px;bottom:20px;display:flex;gap:6px}.edu-dot{width:6px;height:6px;padding:0;border:0;border-radius:999px;background:rgba(255,255,255,.45)}.edu-dot.active{width:18px;background:#fff}.edu-content{display:flex;flex:1;flex-direction:column;padding:27px 28px 28px}.edu-topline{display:flex;justify-content:space-between;gap:14px;align-items:center;margin-bottom:15px}.edu-topline a{color:var(--muted);font-size:.8rem;font-weight:700}.date-pill{padding:5px 9px;border-radius:999px;background:var(--accent-soft);color:#7c542d;font-size:.71rem;font-weight:800}.edu-content h3{font-size:1.32rem;line-height:1.35;margin-bottom:13px}.edu-content p{color:var(--muted);font-size:.94rem}.edu-content .tag-row{margin-top:auto}
+/* =========================================================
+   HOME: LATEST UPDATES + TEACHING
+   TWO PARALLEL PANELS
+   ========================================================= */
+
+.home-dual-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 24px;
+
+  align-items: start;
+}
+
+
+/* Individual container */
+
+.home-panel {
+  min-width: 0;
+
+  padding: 30px;
+
+  border: 1px solid var(--line);
+
+  border-radius: var(--radius);
+
+  background: var(--surface);
+}
+
+
+/* Header inside each panel */
+
+.home-panel-head {
+  margin-bottom: 26px;
+}
+
+
+.home-panel-head .section-index {
+  margin-bottom: 8px;
+}
+
+
+.home-panel-head h2 {
+  margin: 0 0 12px;
+
+  font-size: 1.8rem;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.035em;
+}
+
+
+.home-panel-head p:last-child {
+  max-width: 470px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 0.9rem;
+
+  line-height: 1.65;
+}
+
+
+
+/* =========================================================
+   COMPACT ROW LIST
+   ========================================================= */
+
+.compact-list {
+  width: 100%;
+
+  border-top: 1px solid var(--line);
+}
+
+
+/* Smaller row than current latest-row/teaching-row */
+
+.compact-row {
+  display: grid;
+
+  /*
+     Old:
+     170px 1fr
+
+     New:
+     much smaller date column
+  */
+
+  grid-template-columns: 92px minmax(0, 1fr);
+
+  gap: 18px;
+
+  padding: 17px 0;
+
+  border-bottom: 1px solid var(--line);
+}
+
+
+/* Dates */
+
+.compact-row time {
+  padding-top: 2px;
+
+  color: var(--accent);
+
+  font-family: var(--display);
+
+  font-size: 0.7rem;
+
+  font-weight: 800;
+
+  line-height: 1.45;
+}
+
+
+/* Title */
+
+.compact-row h3 {
+  margin: 0 0 3px;
+
+  font-size: 0.92rem;
+
+  line-height: 1.42;
+
+  letter-spacing: -0.01em;
+}
+
+
+/* Secondary information */
+
+.compact-row p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 0.79rem;
+
+  line-height: 1.5;
+}
+
+
+
+/* =========================================================
+   PANEL FOOTER
+   ========================================================= */
+
+.panel-footer {
+  padding-top: 20px;
+}
+
+
+.small-link {
+  color: var(--navy);
+
+  font-size: 0.82rem;
+
+  font-weight: 700;
+
+  transition: color 0.2s ease;
+}
+
+
+.small-link:hover {
+  color: var(--accent);
+}
+
+
+
+/* =========================================================
+   TABLET
+   Keep parallel until screen becomes too narrow
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .home-dual-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .home-panel {
+    padding: 23px 20px;
+  }
+
+
+  .home-panel-head h2 {
+    font-size: 1.55rem;
+  }
+
+
+  .compact-row {
+    grid-template-columns: 1fr;
+
+    gap: 4px;
+
+    padding: 15px 0;
+  }
+
+
+  .compact-row time {
+    font-size: 0.68rem;
+  }
+
+
+  .compact-row h3 {
+    font-size: 0.9rem;
+  }
+
+}
+
 @media(max-width:840px){.container,.nav-shell{width:min(100% - 32px,var(--container))}.nav-links{display:none}.hero-grid,.section-head,.contact-panel,.research-feature{grid-template-columns:1fr}.profile-panel{max-width:520px}.education-grid,.card-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.section{padding:68px 0}.hero{padding:52px 0 68px}.hero-actions{flex-direction:column}.btn{width:100%}.profile-stats{grid-template-columns:1fr}.latest-row,.teaching-row{grid-template-columns:1fr;gap:6px}.edu-slider{aspect-ratio:16/9}.edu-topline{flex-direction:column;align-items:flex-start}.contact-panel{padding:34px 22px}.contact-links a{flex-direction:column}.footer-row{flex-direction:column;gap:6px}}
