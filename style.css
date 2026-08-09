@@ -1626,3 +1626,436 @@ h4 {
   }
 
 }
+
+
+/* =========================================================
+   COURSES PAGE
+   FIVE INSTITUTIONS IN FIVE COLUMNS
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   Make the courses page wider than the normal site content
+   --------------------------------------------------------- */
+
+.courses-page .container {
+  width: min(1760px, calc(100% - 40px));
+}
+
+
+/* =========================================================
+   PAGE INTRO
+   ========================================================= */
+
+.courses-page {
+  padding: 60px 0 90px;
+}
+
+.courses-intro {
+  max-width: 900px;
+
+  margin: 0 0 35px;
+
+  color: var(--muted);
+
+  font-size: 0.95rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   FIVE-COLUMN LAYOUT
+   ========================================================= */
+
+.course-groups {
+  display: grid;
+
+  /*
+    5 equal columns:
+    DU | IITM | CUSB | IITGN | NPTEL
+  */
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 14px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   EACH INSTITUTION COLUMN
+   ========================================================= */
+
+.course-group {
+  min-width: 0;
+
+  overflow: hidden;
+
+  border: 1px solid var(--line);
+
+  border-radius: 16px;
+
+  background: var(--surface);
+}
+
+
+/* =========================================================
+   COLUMN HEADER
+   ========================================================= */
+
+.course-group-head {
+  min-height: 190px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  justify-content: flex-start;
+
+  gap: 8px;
+
+  padding: 20px 18px;
+
+  border-bottom: 1px solid var(--line);
+
+  background: #ffffff;
+}
+
+
+/* Degree name */
+
+.course-group-head .section-index {
+  margin: 0 0 6px;
+
+  color: var(--accent);
+
+  font-size: 0.65rem;
+
+  line-height: 1.4;
+
+  letter-spacing: 0.07em;
+}
+
+
+/* Institution */
+
+.course-group-head h2 {
+  margin: 0 0 7px;
+
+  font-size: 1.05rem;
+
+  line-height: 1.3;
+
+  letter-spacing: -0.025em;
+}
+
+
+/* Description */
+
+.course-group-head p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 0.72rem;
+
+  line-height: 1.5;
+}
+
+
+/* Programme / syllabus link */
+
+.course-group-head a {
+  margin-top: auto;
+
+  color: var(--accent);
+
+  font-size: 0.7rem;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   COURSES INSIDE EACH COLUMN
+   ========================================================= */
+
+.course-list,
+.nptel-grid {
+  display: block;
+
+  width: 100%;
+}
+
+
+/* Individual course */
+
+.course-item {
+  display: grid;
+
+  grid-template-columns:
+    25px minmax(0, 1fr);
+
+  gap: 8px;
+
+  min-height: 58px;
+
+  padding: 12px 13px;
+
+  border-right: 0 !important;
+
+  border-bottom: 1px solid var(--line);
+
+  background: #ffffff;
+}
+
+
+.course-item:last-child {
+  border-bottom: 0;
+}
+
+
+/* Course number */
+
+.course-index {
+  color: var(--accent);
+
+  font-family: var(--display);
+
+  font-size: 0.62rem;
+
+  font-weight: 800;
+
+  line-height: 1.5;
+}
+
+
+/* Course title */
+
+.course-name {
+  min-width: 0;
+
+  color: var(--ink);
+
+  font-size: 0.73rem;
+
+  font-weight: 600;
+
+  line-height: 1.45;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* Linked courses */
+
+.course-name a {
+  color: var(--navy);
+
+  border-bottom:
+    1px solid
+    var(--accent-soft);
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+.course-name a:hover {
+  color: var(--accent);
+
+  border-color: var(--accent);
+}
+
+
+/* Additional information */
+
+.course-note {
+  display: block;
+
+  margin-top: 4px;
+
+  color: var(--muted);
+
+  font-size: 0.65rem;
+
+  font-weight: 500;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   SUBTLE HOVER
+   ========================================================= */
+
+.course-item {
+  transition:
+    background 0.2s ease;
+}
+
+
+.course-item:hover {
+  background: var(--soft);
+}
+
+
+/* =========================================================
+   OPTIONAL DIFFERENT HEADER EMPHASIS
+   ========================================================= */
+
+.course-group-head {
+  position: relative;
+}
+
+
+.course-group-head::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 3px;
+
+  background: var(--accent);
+}
+
+
+/* =========================================================
+   LARGE SCREENS
+   ========================================================= */
+
+@media (min-width: 1500px) {
+
+  .courses-page .container {
+    width: min(
+      1840px,
+      calc(100% - 50px)
+    );
+  }
+
+
+  .course-groups {
+    gap: 16px;
+  }
+
+
+  .course-name {
+    font-size: 0.76rem;
+  }
+
+}
+
+
+/* =========================================================
+   MEDIUM DESKTOP / SMALL LAPTOP
+   Still keep five columns, but allow horizontal scrolling
+   instead of crushing them.
+   ========================================================= */
+
+@media (max-width: 1250px) {
+
+  .courses-page .container {
+    width: calc(100% - 28px);
+
+    overflow-x: auto;
+
+    padding-bottom: 12px;
+  }
+
+
+  .course-groups {
+    /*
+      Keep 5 columns.
+      Each remains readable.
+    */
+
+    grid-template-columns:
+      repeat(5, 240px);
+
+    width: max-content;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   Horizontal scrolling keeps the 5-column table concept.
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .courses-page {
+    padding-top: 45px;
+  }
+
+
+  .course-groups {
+    grid-template-columns:
+      repeat(5, 230px);
+
+    gap: 12px;
+  }
+
+
+  .course-group-head {
+    min-height: 180px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   Keep columns horizontally scrollable
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .courses-page .container {
+    width: calc(100% - 20px);
+  }
+
+
+  .course-groups {
+    grid-template-columns:
+      repeat(5, 220px);
+
+    gap: 10px;
+  }
+
+
+  .course-group-head {
+    min-height: 175px;
+
+    padding: 17px 15px;
+  }
+
+
+  .course-group-head h2 {
+    font-size: 0.95rem;
+  }
+
+
+  .course-item {
+    padding: 11px 12px;
+  }
+
+
+  .course-name {
+    font-size: 0.7rem;
+  }
+
+}
