@@ -1707,7 +1707,7 @@ h4 {
    ========================================================= */
 
 .course-group-head {
-  min-height: 190px;
+  min-height: 100px;
 
   display: flex;
 
