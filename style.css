@@ -674,7 +674,17 @@ h4 {
 
   line-height: 1.45;
 }
+.compact-row p a {
+  color: var(--navy);
+  font-weight: 700;
+  border-bottom: 1px solid var(--accent-soft);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
 
+.compact-row p a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
 
 /* Footer inside teaching panel */
 
