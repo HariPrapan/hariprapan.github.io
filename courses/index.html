@@ -1,215 +1,1417 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Courses completed by Hari Prapan across University of Delhi, IIT Madras, Central University of South Bihar, IIT Gandhinagar, and NPTEL.">
-  <title>Courses | Hari Prapan</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
-  <style>
-    .courses-page{padding:72px 0 96px}
-    .courses-intro{max-width:860px;margin-bottom:42px;color:var(--muted);font-size:1.02rem;line-height:1.8}
-    .course-groups{display:grid;gap:28px}
-    .course-group{overflow:hidden;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
-    .course-group-head{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;padding:26px 28px 22px;border-bottom:1px solid var(--line)}
-    .course-group-head h2{margin:0 0 6px;font-size:1.45rem;line-height:1.35}
-    .course-group-head p{margin:0;color:var(--muted);font-size:.86rem}
-    .course-group-head a{flex-shrink:0;color:var(--accent);font-size:.8rem;font-weight:700}
-    .course-list,.nptel-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
-    .course-item{display:flex;align-items:flex-start;gap:12px;min-height:74px;padding:17px 20px;border-bottom:1px solid var(--line)}
-    .course-item:nth-child(odd){border-right:1px solid var(--line)}
-    .course-index{flex:0 0 30px;color:var(--accent);font-family:var(--display);font-size:.7rem;font-weight:800;line-height:1.5}
-    .course-name{color:var(--ink);font-size:.9rem;font-weight:600;line-height:1.5}
-    .course-name a{color:var(--navy);border-bottom:1px solid var(--accent-soft)}
-    .course-name a:hover{color:var(--accent);border-color:var(--accent)}
-    .course-note{display:block;margin-top:3px;color:var(--muted);font-size:.76rem;font-weight:500}
-    @media(max-width:760px){
-      .course-group-head{flex-direction:column}
-      .course-list,.nptel-grid{grid-template-columns:1fr}
-      .course-item:nth-child(odd){border-right:0}
-    }
-  </style>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Academic coursework completed by Hari Prapan."
+  >
+
+  <title>
+    Courses | Hari Prapan
+  </title>
+
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../style.css"
+  >
+
 </head>
+
+
 <body>
-<header class="site-header">
-  <div class="nav-shell">
-    <a class="brand" href="../index.html">Hari Prapan<span>.</span></a>
-    <nav class="nav-links">
-      <a href="../index.html">Home</a>
-      <a href="../research/">Research</a>
-      <a href="../education/">Education</a>
-      <a href="../projects/">Projects</a>
-      <a class="active" href="../courses/">Courses</a>
-    </nav>
-    <a class="nav-cta" href="../index.html#contact">Contact</a>
-  </div>
-</header>
-<main id="top">
-<!-- <section class="page-hero">
-  <div class="container">
-    <p class="eyebrow">Courses</p>
-    <h1>Academic Coursework</h1>
-    <p>A consolidated record of coursework completed across my degree programmes at the University of Delhi, IIT Madras, Central University of South Bihar, and IIT Gandhinagar, together with selected NPTEL courses.</p>
-  </div>
-</section> -->
-<section class="courses-page">
-<div class="container">
-  <!-- <!-- <div class="courses-intro">The courses below reflect my academic training across mathematics, statistics, data science, computer science, machine learning, artificial intelligence, and related areas.</div> -->
 
-  <div class="course-groups">
 
-    <section class="course-group">
-      <div class="course-group-head">
-        <div><p class="section-index">B.Sc. Mathematics (Hons.)</p><h2>University of Delhi</h2><p>Mathematics with electives in economics, finance, computing, and related areas.</p></div>
-        <a href="https://www.du.ac.in/du/uploads/Syllabus_2015/B.Sc.%20Hons.%20Mathematics.pdf" target="_blank" rel="noreferrer">Programme syllabus ↗</a>
+  <!-- =====================================================
+       NAVIGATION
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <div class="nav-shell">
+
+      <a
+        class="brand"
+        href="../index.html"
+      >
+        Hari Prapan<span>.</span>
+      </a>
+
+
+      <nav class="nav-links">
+
+        <a href="../index.html">
+          Home
+        </a>
+
+        <a href="../research/">
+          Research
+        </a>
+
+        <a href="../education/">
+          Education
+        </a>
+
+        <a href="../projects/">
+          Projects
+        </a>
+
+        <a
+          class="active"
+          href="../courses/"
+        >
+          Courses
+        </a>
+
+      </nav>
+
+
+      <a
+        class="nav-cta"
+        href="../index.html#contact"
+      >
+        Contact
+      </a>
+
+    </div>
+
+  </header>
+
+
+
+  <main id="top">
+
+
+    <!-- =====================================================
+         PAGE HEADER
+         ===================================================== -->
+
+    <section class="page-hero">
+
+      <div class="container">
+
+        <p class="eyebrow">
+          Courses
+        </p>
+
+        <h1>
+          Academic Coursework
+        </h1>
+
+        <p>
+          Coursework completed across my academic programmes at
+          the University of Delhi, IIT Madras, Central University
+          of South Bihar, IIT Gandhinagar, together with selected
+          NPTEL courses.
+        </p>
+
       </div>
-      <div class="course-list">
-        <div class="course-item"><span class="course-index">01</span><span class="course-name">Introductory Microeconomics</span></div>
-        <div class="course-item"><span class="course-index">02</span><span class="course-name">Calculus</span></div>
-        <div class="course-item"><span class="course-index">03</span><span class="course-name">Algebra</span></div>
-        <div class="course-item"><span class="course-index">04</span><span class="course-name">Environmental Science</span></div>
-        <div class="course-item"><span class="course-index">05</span><span class="course-name">Introductory Macroeconomics</span></div>
-        <div class="course-item"><span class="course-index">06</span><span class="course-name">Real Analysis</span></div>
-        <div class="course-item"><span class="course-index">07</span><span class="course-name">Differential Equations</span></div>
-        <div class="course-item"><span class="course-index">08</span><span class="course-name">English-A</span></div>
-        <div class="course-item"><span class="course-index">09</span><span class="course-name">LaTeX and HTML</span></div>
-        <div class="course-item"><span class="course-index">10</span><span class="course-name">Theory of Real Functions</span></div>
-        <div class="course-item"><span class="course-index">11</span><span class="course-name">Group Theory-I</span></div>
-        <div class="course-item"><span class="course-index">12</span><span class="course-name">Multivariate Calculus <span class="course-note">Including Practicals</span></span></div>
-        <div class="course-item"><span class="course-index">13</span><span class="course-name">Investing in Stock Markets</span></div>
-        <div class="course-item"><span class="course-index">14</span><span class="course-name">Computer Algebra Systems and Related Software</span></div>
-        <div class="course-item"><span class="course-index">15</span><span class="course-name">Partial Differential Equations <span class="course-note">Including Practicals</span></span></div>
-        <div class="course-item"><span class="course-index">16</span><span class="course-name">Riemann Integration &amp; Series of Functions</span></div>
-        <div class="course-item"><span class="course-index">17</span><span class="course-name">Ring Theory &amp; Linear Algebra-I</span></div>
-        <div class="course-item"><span class="course-index">18</span><span class="course-name">Insurance and Risk Management</span></div>
-        <div class="course-item"><span class="course-index">19</span><span class="course-name">C++ Programming</span></div>
-        <div class="course-item"><span class="course-index">20</span><span class="course-name">Metric Spaces</span></div>
-        <div class="course-item"><span class="course-index">21</span><span class="course-name">Group Theory-II</span></div>
-        <div class="course-item"><span class="course-index">22</span><span class="course-name">Probability Theory &amp; Statistics</span></div>
-        <div class="course-item"><span class="course-index">23</span><span class="course-name">Bio-Mathematics</span></div>
-        <div class="course-item"><span class="course-index">24</span><span class="course-name">Complex Analysis <span class="course-note">Including Practicals</span></span></div>
-        <div class="course-item"><span class="course-index">25</span><span class="course-name">Ring Theory and Linear Algebra-II</span></div>
-        <div class="course-item"><span class="course-index">26</span><span class="course-name">Linear Programming and Applications</span></div>
-      </div>
+
     </section>
 
-    <section class="course-group">
-      <div class="course-group-head">
-        <div><p class="section-index">B.S. Data Science &amp; Applications</p><h2>IIT Madras</h2><p>Four-year programme covering mathematics, statistics, programming, ML, software systems, AI, and management.</p></div>
+
+
+    <!-- =====================================================
+         COURSES
+         ===================================================== -->
+
+    <section class="courses-page">
+
+      <div class="container">
+
+
+        <div class="courses-intro">
+
+          My coursework spans mathematics, statistics,
+          data science, computer science, machine learning,
+          artificial intelligence, economics, programming,
+          and related areas.
+
+        </div>
+
+
+
+        <!-- =================================================
+             FIVE PARALLEL COLUMNS
+             ================================================= -->
+
+        <div class="course-groups">
+
+
+          <!-- =================================================
+               COLUMN 1
+               UNIVERSITY OF DELHI
+               ================================================= -->
+
+          <section class="course-group">
+
+            <div class="course-group-head">
+
+              <p class="section-index">
+                B.Sc. Mathematics (Hons.)
+              </p>
+
+              <h2>
+                University of Delhi
+              </h2>
+
+              <p>
+                Mathematics with electives in economics,
+                computing, finance, and related areas.
+              </p>
+
+              <a
+                href="https://www.du.ac.in/du/uploads/Syllabus_2015/B.Sc.%20Hons.%20Mathematics.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Programme syllabus ↗
+              </a>
+
+            </div>
+
+
+            <div class="course-list">
+
+
+              <div class="course-item">
+                <span class="course-index">01</span>
+                <span class="course-name">
+                  Introductory Microeconomics
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">02</span>
+                <span class="course-name">
+                  Calculus
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">03</span>
+                <span class="course-name">
+                  Algebra
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">04</span>
+                <span class="course-name">
+                  Environmental Science
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">05</span>
+                <span class="course-name">
+                  Introductory Macroeconomics
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">06</span>
+                <span class="course-name">
+                  Real Analysis
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">07</span>
+                <span class="course-name">
+                  Differential Equations
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">08</span>
+                <span class="course-name">
+                  English-A
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">09</span>
+                <span class="course-name">
+                  LaTeX and HTML
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">10</span>
+                <span class="course-name">
+                  Theory of Real Functions
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">11</span>
+                <span class="course-name">
+                  Group Theory-I
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">12</span>
+                <span class="course-name">
+                  Multivariate Calculus
+                  <span class="course-note">
+                    Including Practicals
+                  </span>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">13</span>
+                <span class="course-name">
+                  Investing in Stock Markets
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">14</span>
+                <span class="course-name">
+                  Computer Algebra Systems and Related Software
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">15</span>
+                <span class="course-name">
+                  Partial Differential Equations
+                  <span class="course-note">
+                    Including Practicals
+                  </span>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">16</span>
+                <span class="course-name">
+                  Riemann Integration &amp; Series of Functions
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">17</span>
+                <span class="course-name">
+                  Ring Theory &amp; Linear Algebra-I
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">18</span>
+                <span class="course-name">
+                  Insurance and Risk Management
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">19</span>
+                <span class="course-name">
+                  C++ Programming
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">20</span>
+                <span class="course-name">
+                  Metric Spaces
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">21</span>
+                <span class="course-name">
+                  Group Theory-II
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">22</span>
+                <span class="course-name">
+                  Probability Theory &amp; Statistics
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">23</span>
+                <span class="course-name">
+                  Bio-Mathematics
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">24</span>
+                <span class="course-name">
+                  Complex Analysis
+                  <span class="course-note">
+                    Including Practicals
+                  </span>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">25</span>
+                <span class="course-name">
+                  Ring Theory and Linear Algebra-II
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">26</span>
+                <span class="course-name">
+                  Linear Programming and Applications
+                </span>
+              </div>
+
+
+            </div>
+
+          </section>
+
+
+
+          <!-- =================================================
+               COLUMN 2
+               IIT MADRAS
+               ================================================= -->
+
+          <section class="course-group">
+
+            <div class="course-group-head">
+
+              <p class="section-index">
+                B.S. Data Science &amp; Applications
+              </p>
+
+              <h2>
+                IIT Madras
+              </h2>
+
+              <p>
+                Data science, programming, statistics,
+                machine learning, AI, and software systems.
+              </p>
+
+            </div>
+
+
+            <div class="course-list">
+
+
+              <div class="course-item">
+                <span class="course-index">01</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSHS1001.html" target="_blank">
+                    English I ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">02</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSCS1001.html" target="_blank">
+                    Computational Thinking ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">03</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSMA1001.html" target="_blank">
+                    Mathematics for Data Science I ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">04</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSMA1002.html" target="_blank">
+                    Statistics for Data Science I ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">05</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSHS1002.html" target="_blank">
+                    English II ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">06</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSCS1002.html" target="_blank">
+                    Programming in Python ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">07</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSMA1003.html" target="_blank">
+                    Mathematics for Data Science II ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">08</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSMA1004.html" target="_blank">
+                    Statistics for Data Science II ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">09</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSCS2001.html" target="_blank">
+                    Database Management Systems ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">10</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSCS2004.html" target="_blank">
+                    Machine Learning Foundations ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">11</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSMS2001.html" target="_blank">
+                    Business Data Management ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">12</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSMS2001P.html" target="_blank">
+                    Business Data Management - Project ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">13</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSCS2003.html" target="_blank">
+                    Modern Application Development I ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">14</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSMS2002.html" target="_blank">
+                    Business Analytics ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">15</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSCS2003P.html" target="_blank">
+                    Modern Application Development I - Project ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">16</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSCS2006.html" target="_blank">
+                    Modern Application Development II ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">17</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSCS2007.html" target="_blank">
+                    Machine Learning Techniques ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">18</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSCS2006P.html" target="_blank">
+                    Modern Application Development II - Project ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">19</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSSE2001.html" target="_blank">
+                    System Commands ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">20</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSCS2008.html" target="_blank">
+                    Machine Learning Practice ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">21</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSCS2008P.html" target="_blank">
+                    Machine Learning Practice - Project ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">22</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSSE2002.html" target="_blank">
+                    Tools in Data Science ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">23</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSCS2002.html" target="_blank">
+                    Programming, Data Structures and Algorithms using Python ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">24</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSCS2005.html" target="_blank">
+                    Programming Concepts using Java ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">25</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSCS3003.html" target="_blank">
+                    AI: Search Methods for Problem Solving ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">26</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSCS3004.html" target="_blank">
+                    Deep Learning ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">27</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSGN3001.html" target="_blank">
+                    Strategies for Professional Growth ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">28</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSCS3001.html" target="_blank">
+                    Software Engineering ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">29</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSCS3002.html" target="_blank">
+                    Software Testing ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">30</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSMA3012.html" target="_blank">
+                    Linear Statistical Models ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">31</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSMS4001.html" target="_blank">
+                    Industry 4.0 ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">32</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSCS3005.html" target="_blank">
+                    Programming in C ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">33</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSDA5001.html" target="_blank">
+                    Introduction to Big Data ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">34</span>
+                <span class="course-name">
+                  <a href="https://study.iitm.ac.in/ds/course_pages/BSMS4023.html" target="_blank">
+                    Game Theory and Strategy ↗
+                  </a>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">35</span>
+                <span class="course-name">
+                  Foundations of AI: Multiagent Systems
+                  <span class="course-note">
+                    Done at IIT Gandhinagar campus
+                  </span>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">36</span>
+                <span class="course-name">
+                  Special Topics in Computer Science:
+                  Applications of Linear Algebra to Combinatorics
+                  <span class="course-note">
+                    Done at IIT Gandhinagar campus
+                  </span>
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">37</span>
+                <span class="course-name">
+                  Demystifying Networking
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">38</span>
+                <span class="course-name">
+                  Cloud Computing
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">39</span>
+                <span class="course-name">
+                  Soft Skill Development
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">40</span>
+                <span class="course-name">
+                  Business Analytics &amp; Text Mining Modeling using Python
+                </span>
+              </div>
+
+
+            </div>
+
+          </section>
+
+
+
+          <!-- =================================================
+               COLUMN 3
+               CUSB
+               ================================================= -->
+
+          <section class="course-group">
+
+            <div class="course-group-head">
+
+              <p class="section-index">
+                M.Sc. Data Science &amp; Applied Statistics
+              </p>
+
+              <h2>
+                Central University of South Bihar
+              </h2>
+
+              <p>
+                Statistics, programming, machine learning,
+                data analytics, visualization, and projects.
+              </p>
+
+              <a
+                href="https://drive.google.com/file/d/19TAhWLrG_JNBDaGO9FpudmZwVKHtLG9r/view?usp=drive_link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Programme document ↗
+              </a>
+
+            </div>
+
+
+            <div class="course-list">
+
+
+              <div class="course-item">
+                <span class="course-index">01</span>
+                <span class="course-name">
+                  Linux and Bioinformatics
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">02</span>
+                <span class="course-name">
+                  Statistical Essential for Data Science
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">03</span>
+                <span class="course-name">
+                  Distribution Theory and Nonparametric Statistics
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">04</span>
+                <span class="course-name">
+                  R Programming for Data Science
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">05</span>
+                <span class="course-name">
+                  Data Analysis with R, SPSS and Excel
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">06</span>
+                <span class="course-name">
+                  Data Mining
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">07</span>
+                <span class="course-name">
+                  Linear Models and Regression Analysis
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">08</span>
+                <span class="course-name">
+                  Multivariate Analysis for Data Science
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">09</span>
+                <span class="course-name">
+                  Statistical Inference for Data Science
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">10</span>
+                <span class="course-name">
+                  Statistical Analytics for Data Science
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">11</span>
+                <span class="course-name">
+                  Research Methodology and Project Management of Data Science
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">12</span>
+                <span class="course-name">
+                  Python Programming for Data Science
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">13</span>
+                <span class="course-name">
+                  Machine Learning
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">14</span>
+                <span class="course-name">
+                  Data Analysis using Excel and Python
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">15</span>
+                <span class="course-name">
+                  Mini Project
+
+                  <span class="course-note">
+                    DataEaze — industry-oriented web app
+                    for end-to-end Data Analysis and
+                    Machine Learning workflows
+                  </span>
+
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">16</span>
+                <span class="course-name">
+                  Data Visualization with Tableau
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">17</span>
+                <span class="course-name">
+                  Contribution to Data Science and Machine Learning
+                  by Indian Scholars and Indian Industries
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">18</span>
+                <span class="course-name">
+
+                  Major Project
+
+                  <span class="course-note">
+                    DataEaze 2.0 — AI-powered web app for
+                    end-to-end ML and DL workflows;
+                    completed at NIELIT Patna campus
+                  </span>
+
+                </span>
+              </div>
+
+
+              <div class="course-item">
+                <span class="course-index">19</span>
+                <span class="course-name">
+
+                  Deep Learning
+
+                  <span class="course-note">
+                    Done at NIELIT Patna campus
+                  </span>
+
+                </span>
+              </div>
+
+
+            </div>
+
+          </section>
+
+
+
+          <!-- =================================================
+               COLUMN 4
+               IIT GANDHINAGAR
+               ================================================= -->
+
+          <section class="course-group">
+
+            <div class="course-group-head">
+
+              <p class="section-index">
+                Ph.D. Computer Science &amp; Engineering
+              </p>
+
+              <h2>
+                IIT Gandhinagar
+              </h2>
+
+              <p>
+                Doctoral coursework in algorithms,
+                machine learning, incentives, AI ethics,
+                and deep learning.
+              </p>
+
+            </div>
+
+
+            <div class="course-list">
+
+
+              <div class="course-item">
+
+                <span class="course-index">
+                  01
+                </span>
+
+                <span class="course-name">
+
+                  <a
+                    href="https://gmanoj.people.iitgn.ac.in/CS610/"
+                    target="_blank"
+                  >
+                    Algorithms ↗
+                  </a>
+
+                </span>
+
+              </div>
+
+
+              <div class="course-item">
+
+                <span class="course-index">
+                  02
+                </span>
+
+                <span class="course-name">
+
+                  <a
+                    href="https://sites.google.com/iitgn.ac.in/mdml/home"
+                    target="_blank"
+                  >
+                    Incentives and Machine Learning ↗
+                  </a>
+
+                </span>
+
+              </div>
+
+
+              <div class="course-item">
+
+                <span class="course-index">
+                  03
+                </span>
+
+                <span class="course-name">
+                  FP602 Writing
+                </span>
+
+              </div>
+
+
+              <div class="course-item">
+
+                <span class="course-index">
+                  04
+                </span>
+
+                <span class="course-name">
+
+                  <a
+                    href="https://sites.google.com/iitgn.ac.in/ethicsai/course-contents"
+                    target="_blank"
+                  >
+                    Ethics of AI ↗
+                  </a>
+
+                </span>
+
+              </div>
+
+
+              <div class="course-item">
+
+                <span class="course-index">
+                  05
+                </span>
+
+                <span class="course-name">
+                  Machine Learning
+                </span>
+
+              </div>
+
+
+              <div class="course-item">
+
+                <span class="course-index">
+                  06
+                </span>
+
+                <span class="course-name">
+
+                  <a
+                    href="https://sites.google.com/iitgn.ac.in/es667/home"
+                    target="_blank"
+                  >
+                    Deep Learning ↗
+                  </a>
+
+                </span>
+
+              </div>
+
+
+            </div>
+
+          </section>
+
+
+
+          <!-- =================================================
+               COLUMN 5
+               NPTEL
+               ================================================= -->
+
+          <section class="course-group">
+
+            <div class="course-group-head">
+
+              <p class="section-index">
+                Additional Coursework
+              </p>
+
+              <h2>
+                NPTEL
+              </h2>
+
+              <p>
+                Selected courses completed through the
+                National Programme on Technology Enhanced Learning.
+              </p>
+
+            </div>
+
+
+            <div class="course-list">
+
+
+              <div class="course-item">
+
+                <span class="course-index">
+                  01
+                </span>
+
+                <span class="course-name">
+
+                  <a
+                    href="https://onlinecourses.nptel.ac.in/noc19_cs75/preview"
+                    target="_blank"
+                  >
+                    Demystifying Networking ↗
+                  </a>
+
+                </span>
+
+              </div>
+
+
+              <div class="course-item">
+
+                <span class="course-index">
+                  02
+                </span>
+
+                <span class="course-name">
+
+                  <a
+                    href="https://onlinecourses.nptel.ac.in/noc24_cs118/preview"
+                    target="_blank"
+                  >
+                    Cloud Computing ↗
+                  </a>
+
+                </span>
+
+              </div>
+
+
+              <div class="course-item">
+
+                <span class="course-index">
+                  03
+                </span>
+
+                <span class="course-name">
+
+                  <a
+                    href="https://onlinecourses.nptel.ac.in/noc23_hs10/preview"
+                    target="_blank"
+                  >
+                    Soft Skill Development ↗
+                  </a>
+
+                </span>
+
+              </div>
+
+
+              <div class="course-item">
+
+                <span class="course-index">
+                  04
+                </span>
+
+                <span class="course-name">
+
+                  <a
+                    href="https://onlinecourses.nptel.ac.in/noc19_mg47/preview"
+                    target="_blank"
+                  >
+                    Business Analytics &amp; Text Mining
+                    Modeling using Python ↗
+                  </a>
+
+                </span>
+
+              </div>
+
+
+              <div class="course-item">
+
+                <span class="course-index">
+                  05
+                </span>
+
+                <span class="course-name">
+
+                  <a
+                    href="https://onlinecourses.nptel.ac.in/noc20_cs12/preview"
+                    target="_blank"
+                  >
+                    Data Mining ↗
+                  </a>
+
+                </span>
+
+              </div>
+
+
+              <div class="course-item">
+
+                <span class="course-index">
+                  06
+                </span>
+
+                <span class="course-name">
+
+                  <a
+                    href="https://onlinecourses.nptel.ac.in/noc20_ee74/preview"
+                    target="_blank"
+                  >
+                    Deep Learning for Visual Computing ↗
+                  </a>
+
+                </span>
+
+              </div>
+
+
+              <div class="course-item">
+
+                <span class="course-index">
+                  07
+                </span>
+
+                <span class="course-name">
+
+                  <a
+                    href="https://onlinecourses.nptel.ac.in/noc25_cs45/preview"
+                    target="_blank"
+                  >
+                    Introduction to Large Language Models ↗
+                  </a>
+
+                </span>
+
+              </div>
+
+
+            </div>
+
+          </section>
+
+
+        </div>
+
       </div>
-      <div class="course-list">
-        <div class="course-item"><span class="course-index">01</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSHS1001.html" target="_blank">English I ↗</a></span></div>
-        <div class="course-item"><span class="course-index">02</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSCS1001.html" target="_blank">Computational Thinking ↗</a></span></div>
-        <div class="course-item"><span class="course-index">03</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSMA1001.html" target="_blank">Mathematics for Data Science I ↗</a></span></div>
-        <div class="course-item"><span class="course-index">04</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSMA1002.html" target="_blank">Statistics for Data Science I ↗</a></span></div>
-        <div class="course-item"><span class="course-index">05</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSHS1002.html" target="_blank">English II ↗</a></span></div>
-        <div class="course-item"><span class="course-index">06</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSCS1002.html" target="_blank">Programming in Python ↗</a></span></div>
-        <div class="course-item"><span class="course-index">07</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSMA1003.html" target="_blank">Mathematics for Data Science II ↗</a></span></div>
-        <div class="course-item"><span class="course-index">08</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSMA1004.html" target="_blank">Statistics for Data Science II ↗</a></span></div>
-        <div class="course-item"><span class="course-index">09</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSCS2001.html" target="_blank">Database Management Systems ↗</a></span></div>
-        <div class="course-item"><span class="course-index">10</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSCS2004.html" target="_blank">Machine Learning Foundations ↗</a></span></div>
-        <div class="course-item"><span class="course-index">11</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSMS2001.html" target="_blank">Business Data Management ↗</a></span></div>
-        <div class="course-item"><span class="course-index">12</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSMS2001P.html" target="_blank">Business Data Management - Project ↗</a></span></div>
-        <div class="course-item"><span class="course-index">13</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSCS2003.html" target="_blank">Modern Application Development I ↗</a></span></div>
-        <div class="course-item"><span class="course-index">14</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSMS2002.html" target="_blank">Business Analytics ↗</a></span></div>
-        <div class="course-item"><span class="course-index">15</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSCS2003P.html" target="_blank">Modern Application Development I - Project ↗</a></span></div>
-        <div class="course-item"><span class="course-index">16</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSCS2006.html" target="_blank">Modern Application Development II ↗</a></span></div>
-        <div class="course-item"><span class="course-index">17</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSCS2007.html" target="_blank">Machine Learning Techniques ↗</a></span></div>
-        <div class="course-item"><span class="course-index">18</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSCS2006P.html" target="_blank">Modern Application Development II - Project ↗</a></span></div>
-        <div class="course-item"><span class="course-index">19</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSSE2001.html" target="_blank">System Commands ↗</a></span></div>
-        <div class="course-item"><span class="course-index">20</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSCS2008.html" target="_blank">Machine Learning Practice ↗</a></span></div>
-        <div class="course-item"><span class="course-index">21</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSCS2008P.html" target="_blank">Machine Learning Practice - Project ↗</a></span></div>
-        <div class="course-item"><span class="course-index">22</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSSE2002.html" target="_blank">Tools in Data Science ↗</a></span></div>
-        <div class="course-item"><span class="course-index">23</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSCS2002.html" target="_blank">Programming, Data Structures and Algorithms using Python ↗</a></span></div>
-        <div class="course-item"><span class="course-index">24</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSCS2005.html" target="_blank">Programming Concepts using Java ↗</a></span></div>
-        <div class="course-item"><span class="course-index">25</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSCS3003.html" target="_blank">AI: Search Methods for Problem Solving ↗</a></span></div>
-        <div class="course-item"><span class="course-index">26</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSCS3004.html" target="_blank">Deep Learning ↗</a></span></div>
-        <div class="course-item"><span class="course-index">27</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSGN3001.html" target="_blank">Strategies for Professional Growth ↗</a></span></div>
-        <div class="course-item"><span class="course-index">28</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSCS3001.html" target="_blank">Software Engineering ↗</a></span></div>
-        <div class="course-item"><span class="course-index">29</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSCS3002.html" target="_blank">Software Testing ↗</a></span></div>
-        <div class="course-item"><span class="course-index">30</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSMA3012.html" target="_blank">Linear Statistical Models ↗</a></span></div>
-        <div class="course-item"><span class="course-index">31</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSMS4001.html" target="_blank">Industry 4.0 ↗</a></span></div>
-        <div class="course-item"><span class="course-index">32</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSCS3005.html" target="_blank">Programming in C ↗</a></span></div>
-        <div class="course-item"><span class="course-index">33</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSDA5001.html" target="_blank">Introduction to Big Data ↗</a></span></div>
-        <div class="course-item"><span class="course-index">34</span><span class="course-name"><a href="https://study.iitm.ac.in/ds/course_pages/BSMS4023.html" target="_blank">Game Theory and Strategy ↗</a></span></div>
-        <div class="course-item"><span class="course-index">35</span><span class="course-name">Foundations of AI: Multiagent Systems <span class="course-note">Done at IIT Gandhinagar campus</span></span></div>
-        <div class="course-item"><span class="course-index">36</span><span class="course-name">Special Topics in Computer Science: Applications of Linear Algebra to Combinatorics <span class="course-note">Done at IIT Gandhinagar campus</span></span></div>
-        <div class="course-item"><span class="course-index">37</span><span class="course-name">Demystifying Networking</span></div>
-        <div class="course-item"><span class="course-index">38</span><span class="course-name">Cloud Computing</span></div>
-        <div class="course-item"><span class="course-index">39</span><span class="course-name">Soft Skill Development</span></div>
-        <div class="course-item"><span class="course-index">40</span><span class="course-name">Business Analytics &amp; Text Mining Modeling using Python</span></div>
-      </div>
+
     </section>
 
-    <section class="course-group">
-      <div class="course-group-head">
-        <div><p class="section-index">M.Sc. Data Science &amp; Applied Statistics</p><h2>Central University of South Bihar</h2><p>Statistics, data science, programming, machine learning, visualization, and project work.</p></div>
-        <a href="https://drive.google.com/file/d/19TAhWLrG_JNBDaGO9FpudmZwVKHtLG9r/view?usp=drive_link" target="_blank" rel="noreferrer">Programme document ↗</a>
-      </div>
-      <div class="course-list">
-        <div class="course-item"><span class="course-index">01</span><span class="course-name">Linux and Bioinformatics</span></div>
-        <div class="course-item"><span class="course-index">02</span><span class="course-name">Statistical Essential for Data Science</span></div>
-        <div class="course-item"><span class="course-index">03</span><span class="course-name">Distribution Theory and Nonparametric Statistics</span></div>
-        <div class="course-item"><span class="course-index">04</span><span class="course-name">R Programming for Data Science</span></div>
-        <div class="course-item"><span class="course-index">05</span><span class="course-name">Data Analysis with R, SPSS and Excel</span></div>
-        <div class="course-item"><span class="course-index">06</span><span class="course-name">Data Mining</span></div>
-        <div class="course-item"><span class="course-index">07</span><span class="course-name">Linear Models and Regression Analysis</span></div>
-        <div class="course-item"><span class="course-index">08</span><span class="course-name">Multivariate Analysis for Data Science</span></div>
-        <div class="course-item"><span class="course-index">09</span><span class="course-name">Statistical Inference for Data Science</span></div>
-        <div class="course-item"><span class="course-index">10</span><span class="course-name">Statistical Analytics for Data Science</span></div>
-        <div class="course-item"><span class="course-index">11</span><span class="course-name">Research Methodology and Project Management of Data Science</span></div>
-        <div class="course-item"><span class="course-index">12</span><span class="course-name">Python Programming for Data Science</span></div>
-        <div class="course-item"><span class="course-index">13</span><span class="course-name">Machine Learning</span></div>
-        <div class="course-item"><span class="course-index">14</span><span class="course-name">Data Analysis using Excel and Python</span></div>
-        <div class="course-item"><span class="course-index">15</span><span class="course-name">Mini Project <span class="course-note">DataEaze — industry-oriented web app for end-to-end data analysis and machine learning workflows</span></span></div>
-        <div class="course-item"><span class="course-index">16</span><span class="course-name">Data Visualization with Tableau</span></div>
-        <div class="course-item"><span class="course-index">17</span><span class="course-name">Contribution to Data Science and Machine Learning by Indian Scholars and Indian Industries</span></div>
-        <div class="course-item"><span class="course-index">18</span><span class="course-name">Major Project <span class="course-note">DataEaze 2.0 — AI-powered web app for end-to-end ML/DL workflows; completed at NIELIT Patna campus</span></span></div>
-        <div class="course-item"><span class="course-index">19</span><span class="course-name">Deep Learning <span class="course-note">Done at NIELIT Patna campus</span></span></div>
-      </div>
-    </section>
+  </main>
 
-    <section class="course-group">
-      <div class="course-group-head">
-        <div><p class="section-index">Ph.D. Computer Science &amp; Engineering</p><h2>IIT Gandhinagar</h2><p>Doctoral coursework in algorithms, incentive-aware machine learning, AI ethics, machine learning, and deep learning.</p></div>
-      </div>
-      <div class="course-list">
-        <div class="course-item"><span class="course-index">01</span><span class="course-name"><a href="https://gmanoj.people.iitgn.ac.in/CS610/" target="_blank">Algorithms ↗</a></span></div>
-        <div class="course-item"><span class="course-index">02</span><span class="course-name"><a href="https://sites.google.com/iitgn.ac.in/mdml/home" target="_blank">Incentives and Machine Learning ↗</a></span></div>
-        <div class="course-item"><span class="course-index">03</span><span class="course-name">FP602 Writing</span></div>
-        <div class="course-item"><span class="course-index">04</span><span class="course-name"><a href="https://sites.google.com/iitgn.ac.in/ethicsai/course-contents" target="_blank">Ethics of AI ↗</a></span></div>
-        <div class="course-item"><span class="course-index">05</span><span class="course-name">Machine Learning</span></div>
-        <div class="course-item"><span class="course-index">06</span><span class="course-name"><a href="https://sites.google.com/iitgn.ac.in/es667/home" target="_blank">Deep Learning ↗</a></span></div>
-      </div>
-    </section>
 
-    <section class="course-group">
-      <div class="course-group-head">
-        <div><p class="section-index">Additional Coursework</p><h2>NPTEL</h2><p>Selected online courses completed through the National Programme on Technology Enhanced Learning.</p></div>
-      </div>
-      <div class="nptel-grid">
-        <div class="course-item"><span class="course-index">01</span><span class="course-name"><a href="https://onlinecourses.nptel.ac.in/noc19_cs75/preview" target="_blank">Demystifying Networking ↗</a></span></div>
-        <div class="course-item"><span class="course-index">02</span><span class="course-name"><a href="https://onlinecourses.nptel.ac.in/noc24_cs118/preview" target="_blank">Cloud Computing ↗</a></span></div>
-        <div class="course-item"><span class="course-index">03</span><span class="course-name"><a href="https://onlinecourses.nptel.ac.in/noc23_hs10/preview" target="_blank">Soft Skill Development ↗</a></span></div>
-        <div class="course-item"><span class="course-index">04</span><span class="course-name"><a href="https://onlinecourses.nptel.ac.in/noc19_mg47/preview" target="_blank">Business Analytics &amp; Text Mining Modeling using Python ↗</a></span></div>
-        <div class="course-item"><span class="course-index">05</span><span class="course-name"><a href="https://onlinecourses.nptel.ac.in/noc20_cs12/preview" target="_blank">Data Mining ↗</a></span></div>
-        <div class="course-item"><span class="course-index">06</span><span class="course-name"><a href="https://onlinecourses.nptel.ac.in/noc20_ee74/preview" target="_blank">Deep Learning for Visual Computing ↗</a></span></div>
-        <div class="course-item"><span class="course-index">07</span><span class="course-name"><a href="https://onlinecourses.nptel.ac.in/noc25_cs45/preview" target="_blank">Introduction to Large Language Models ↗</a></span></div>
-      </div>
-    </section>
 
-  </div>
-</div>
-</section>
-</main>
-<footer class="site-footer">
-  <div class="container footer-row">
-    <span>© 2026 Hari Prapan</span>
-    <a href="#top">Back to top ↑</a>
-  </div>
-</footer>
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-row">
+
+      <span>
+        © 2026 Hari Prapan
+      </span>
+
+      <a href="#top">
+        Back to top ↑
+      </a>
+
+    </div>
+
+  </footer>
+
+
 </body>
+
 </html>
