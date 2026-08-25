@@ -329,18 +329,24 @@
 
                Copy the article below, update title/authors/etc.
 
-          <article class="paper-card">
+        
+
+               ================================================= -->
+   <article class="paper-card">
 
             <div class="paper-number">
-              02
+              Paper 01
             </div>
+
 
             <div class="paper-content">
 
+              <!-- STATUS -->
+
               <div class="paper-meta">
 
-                <span class="paper-status">
-                  Working Paper
+                <span class="paper-status under-review">
+                  Under Review
                 </span>
 
                 <span class="paper-type">
@@ -349,34 +355,135 @@
 
               </div>
 
+
+              <!-- TITLE -->
+
               <h2 class="paper-title">
-                Your Future Paper Title
+              Privacy-Preserving Fairness Estimation in Federated Learning
               </h2>
 
+
+              <!-- AUTHORS -->
+
               <p class="paper-authors">
+
                 <strong>Authors:</strong>
-                Hari Prapan, Coauthor Name
+
+                <a
+                  href="https://sites.google.com/view/hariprapan/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Hari Prapan
+                </a>,
+                <a
+                  href="https://openreview.net/profile?id=~Aman_Oberoi1"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                 Aman Oberoi
+                </a>,
+
+                <a
+                  href="https://iitgn.ac.in/faculty/cse/fac-manisha"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Manisha Padala
+                </a>
+
               </p>
+
+
+              <!-- ABSTRACT / DESCRIPTION -->
 
               <div class="paper-abstract">
 
                 <p>
-                  Add a short description or abstract here.
+                Fairness-aware federated learning seeks to reduce disparities across
+sensitive groups while preserving the decentralized nature of training. However, estimating global fairness often requires clients to
+communicate statistics derived from sensitive attributes and model
+predictions, introducing an additional privacy concern.
+                </p>
+
+                <p>
+                 We propose PriFedRényi, a differentially private framework for
+federated fairness that protects this fairness-statistics communication channel. Each client privatizes a normalized joint histogram of
+predictions and sensitive attributes, from which all shared fairness
+statistics are derived. We establish record-level privacy guarantees
+under repeated communication and analyze how privacy perturbations propagate to the global Rényi matrix and its second singular
+direction used for fairness regularization
+                </p>
+
+                <p>
+                Experiments on Adult and Drug show that PriFedRényi maintains accuracy and group-fairness performance close to the nonprivate baseline across a broad range of privacy budgets. The results
+further show that the practical effect of privacy depends not only on
+the noise magnitude, but also on local sample size and the stability
+of the global fairness direction.
+
                 </p>
 
               </div>
 
+
+              <!-- TAGS -->
+
               <div class="tag-row">
-                <span>Topic 1</span>
-                <span>Topic 2</span>
+
+                <span>
+                 Federated learning
+                </span>
+
+                <span>
+                 Fairness
+                </span>
+
+                <span>
+                  Differential Privacy
+                </span>
+
+                <span>
+                  Equal Opportunity
+                </span>
+
+               
+
               </div>
+
+
+              <!-- OPTIONAL LINKS
+                   Uncomment these later when available.
+
+              <div class="paper-links">
+
+                <a
+                  href="paper.pdf"
+                  target="_blank"
+                >
+                  PDF ↗
+                </a>
+
+                <a
+                  href="https://arxiv.org/..."
+                  target="_blank"
+                >
+                  arXiv ↗
+                </a>
+
+                <a
+                  href="https://github.com/..."
+                  target="_blank"
+                >
+                  Code ↗
+                </a>
+
+              </div>
+
+              -->
 
             </div>
 
           </article>
-
-               ================================================= -->
-
 
         </div>
 
