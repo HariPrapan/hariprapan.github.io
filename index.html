@@ -339,7 +339,7 @@
    */
 
   const TEACHING_SHEET_URL =
-    "https://docs.google.com/spreadsheets/d/e/2PACX-1vR9oUjfBWdf-Z8QhOGrE8JK8fcGK5Io_TpUBzTR_tbhsaF2whx5bLVgYDDShZ_bjOrnYDABsMBkF5nP/pub?gid=0&single=true&output=csv";
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vR9oUjfBWdf-Z8QhOGrE8JK8fcGK5Io_TpUBzTR_tbhsaF2whx5bLVgYDDShZ_bjOrnYDABsMBkF5nP/pub?gid=0&single=true&output=csv" ;
 
 
   /*
@@ -529,7 +529,7 @@
     try {
 
       const response =
-        await fetch(TEACHING_SHEET_URL);
+        await fetch(TEACHING_SHEET_URL + "&cache=" + Date.now());
 
 
       if (!response.ok) {
