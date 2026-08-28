@@ -277,7 +277,7 @@
       </section>
 
 
-      <!-- =========================
+      <!-- <!-- =========================
            TEACHING
            ========================= -->
 
@@ -396,8 +396,38 @@
 
         </div> -->
 
-      </section>
+      </section> -->
 
+     <!-- =========================
+     TEACHING
+     ========================= -->
+
+<section class="home-panel">
+
+  <div class="home-panel-head">
+    <p class="section-index">
+      Teaching
+    </p>
+  </div>
+
+  <!-- Teaching entries will be loaded automatically -->
+  <div class="compact-list" id="teaching-list">
+
+    <!-- Loading message -->
+    <div class="compact-row" id="teaching-loading">
+      <time>Loading</time>
+      <div>
+        <h3>Loading teaching experience...</h3>
+        <p>Please wait.</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+     
     </div>
 
   </div>
@@ -417,4 +447,341 @@
   </section>
   </main><footer class="site-footer"><div class="container footer-row"><span>© 2026 Hari Prapan</span><a href="#top">Back to top ↑</a></div>
 </footer>
+
+
+
+   <script>
+
+  /*
+   * ==========================================
+   * GOOGLE SHEETS → TEACHING SECTION
+   * ==========================================
+   */
+
+  const TEACHING_SHEET_URL =
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vR9oUjfBWdf-Z8QhOGrE8JK8fcGK5Io_TpUBzTR_tbhsaF2whx5bLVgYDDShZ_bjOrnYDABsMBkF5nP/pub?gid=0&single=true&output=csv";
+
+
+  /*
+   * Escape HTML to prevent accidental HTML
+   * from being inserted into the page.
+   */
+  function escapeHTML(value) {
+
+    return String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+
+  }
+
+
+  /*
+   * Simple CSV parser.
+   *
+   * Handles commas inside quoted cells.
+   */
+  function parseCSV(csv) {
+
+    const rows = [];
+    let row = [];
+    let value = "";
+    let insideQuotes = false;
+
+    for (let i = 0; i < csv.length; i++) {
+
+      const char = csv[i];
+      const next = csv[i + 1];
+
+      if (char === '"' && insideQuotes && next === '"') {
+
+        value += '"';
+        i++;
+
+      }
+
+      else if (char === '"') {
+
+        insideQuotes = !insideQuotes;
+
+      }
+
+      else if (char === "," && !insideQuotes) {
+
+        row.push(value.trim());
+        value = "";
+
+      }
+
+      else if ((char === "\n" || char === "\r") && !insideQuotes) {
+
+        if (char === "\r" && next === "\n") {
+          i++;
+        }
+
+        row.push(value.trim());
+
+        if (row.some(cell => cell !== "")) {
+          rows.push(row);
+        }
+
+        row = [];
+        value = "";
+
+      }
+
+      else {
+
+        value += char;
+
+      }
+
+    }
+
+
+    // Add final cell
+    if (value !== "" || row.length > 0) {
+
+      row.push(value.trim());
+
+      if (row.some(cell => cell !== "")) {
+        rows.push(row);
+      }
+
+    }
+
+    return rows;
+
+  }
+
+
+  /*
+   * Convert CSV rows into objects.
+   */
+  function csvToObjects(rows) {
+
+    if (rows.length < 2) {
+      return [];
+    }
+
+    const headers = rows[0].map(header =>
+      header.trim().toLowerCase()
+    );
+
+    return rows.slice(1).map(row => {
+
+      const object = {};
+
+      headers.forEach((header, index) => {
+
+        object[header] = row[index] || "";
+
+      });
+
+      return object;
+
+    });
+
+  }
+
+
+  /*
+   * Create one teaching entry.
+   */
+  function createTeachingEntry(item) {
+
+    const article = document.createElement("article");
+
+    article.className = "compact-row";
+
+
+    const date = escapeHTML(item.date);
+
+    const course = escapeHTML(item.course);
+
+    const role = escapeHTML(item.role);
+
+    const institution = escapeHTML(item.institution);
+
+
+    article.innerHTML = `
+
+      <time>
+        ${date}
+      </time>
+
+      <div>
+
+        <h3>
+          ${course}
+        </h3>
+
+        <p>
+          ${role} · ${institution}
+        </p>
+
+      </div>
+
+    `;
+
+
+    return article;
+
+  }
+
+
+  /*
+   * Load teaching data.
+   */
+  async function loadTeaching() {
+
+    const container =
+      document.getElementById("teaching-list");
+
+
+    if (!container) {
+      return;
+    }
+
+
+    try {
+
+      const response =
+        await fetch(TEACHING_SHEET_URL);
+
+
+      if (!response.ok) {
+
+        throw new Error(
+          "Unable to fetch Google Sheet."
+        );
+
+      }
+
+
+      const csv =
+        await response.text();
+
+
+      const rows =
+        parseCSV(csv);
+
+
+      const teaching =
+        csvToObjects(rows);
+
+
+      /*
+       * Remove loading message.
+       */
+      container.innerHTML = "";
+
+
+      /*
+       * If the sheet is empty.
+       */
+      if (teaching.length === 0) {
+
+        container.innerHTML = `
+
+          <div class="compact-row">
+
+            <time>—</time>
+
+            <div>
+
+              <h3>
+                No teaching entries yet
+              </h3>
+
+              <p>
+                Teaching information will appear here automatically.
+              </p>
+
+            </div>
+
+          </div>
+
+        `;
+
+        return;
+
+      }
+
+
+      /*
+       * Add each teaching entry.
+       */
+      teaching.forEach(item => {
+
+        /*
+         * Ignore completely empty rows.
+         */
+        if (
+          !item.date &&
+          !item.course &&
+          !item.role &&
+          !item.institution
+        ) {
+          return;
+        }
+
+
+        const entry =
+          createTeachingEntry(item);
+
+
+        container.appendChild(entry);
+
+      });
+
+    }
+
+
+    catch (error) {
+
+      console.error(
+        "Teaching section error:",
+        error
+      );
+
+
+      container.innerHTML = `
+
+        <div class="compact-row">
+
+          <time>—</time>
+
+          <div>
+
+            <h3>
+              Unable to load teaching information
+            </h3>
+
+            <p>
+              Please try again later.
+            </p>
+
+          </div>
+
+        </div>
+
+      `;
+
+    }
+
+  }
+
+
+  /*
+   * Start loading the teaching section.
+   */
+  document.addEventListener(
+    "DOMContentLoaded",
+    loadTeaching
+  );
+
+</script>
 </body></html>
