@@ -1,327 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="Projects by Hari Prapan in federated learning, machine learning, data science, generative AI, and web development.">
-<title>Projects | Hari Prapan</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
-<style>
-.projects-page{padding:76px 0 100px}.projects-list{display:grid;gap:30px}.project-showcase{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);overflow:hidden;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}.project-showcase.reverse{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}.project-showcase.reverse .project-media{order:2}.project-showcase.reverse .project-body{order:1}.project-media{position:relative;min-height:390px;overflow:hidden;background:#e5e9ee}.project-media iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.media-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:30px;text-align:center;background:linear-gradient(145deg,#e9edf2,#dce2e9)}.media-placeholder strong{color:var(--navy);font-family:var(--display);font-size:1.05rem}.media-placeholder span{max-width:300px;color:var(--muted);font-size:.78rem}.project-body{display:flex;flex-direction:column;padding:34px 36px}.project-topline{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:18px}.project-number{color:var(--accent);font-family:var(--display);font-size:.72rem;font-weight:800}.project-badge{padding:5px 9px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:.68rem;font-weight:800}.project-body h2{margin:0 0 12px;font-size:clamp(1.45rem,2.5vw,2.05rem);line-height:1.3;letter-spacing:-.035em}.project-course{margin:0 0 5px;color:var(--accent);font-size:.8rem;font-weight:700}.project-institute{margin:0 0 20px;color:var(--muted);font-size:.82rem;font-weight:600}.project-description{color:var(--muted);font-size:.93rem;line-height:1.78}.project-description p{margin:0 0 13px}.project-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px}.project-tags span{padding:6px 9px;border:1px solid var(--line);border-radius:999px;background:var(--soft);color:var(--muted);font-size:.7rem;font-weight:700}.project-links{display:flex;flex-wrap:wrap;gap:9px;margin-top:auto;padding-top:24px}.project-links a{display:inline-flex;align-items:center;min-height:37px;padding:0 12px;border:1px solid var(--line);border-radius:999px;color:var(--navy);font-size:.75rem;font-weight:700}.project-team{margin-top:19px;padding-top:17px;border-top:1px solid var(--line);color:var(--muted);font-size:.76rem}.project-team strong{color:var(--ink)}@media(max-width:900px){.project-showcase,.project-showcase.reverse{grid-template-columns:1fr}.project-showcase.reverse .project-media,.project-showcase.reverse .project-body{order:initial}.project-media{min-height:330px}}@media(max-width:600px){.projects-page{padding:55px 0 75px}.projects-list{gap:20px}.project-media{min-height:240px}.project-body{padding:25px 21px}.project-body h2{font-size:1.4rem}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projects by Hari Prapan in federated learning, machine learning, data science, generative AI, and web development.">
+  <meta name="theme-color" content="#141c3a">
+  <title>Projects | Hari Prapan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap">
+  <link rel="stylesheet" href="../style.css">
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="../script.js" defer></script>
 </head>
 <body>
-<header class="site-header"><div class="nav-shell">
-<a class="brand" href="../index.html">Hari Prapan<span>.</span></a>
-<nav class="nav-links"><a href="../index.html">Home</a><a href="../research/">Research</a><a href="../education/">Education</a><a class="active" href="../projects/">Projects</a><a href="../courses/">Courses</a></nav>
-<a class="nav-cta" href="../index.html#contact">Contact</a>
-</div></header>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<main id="top">
-<!-- <section class="page-hero"><div class="container">
-<p class="eyebrow">Projects</p>
-<h1>Selected Projects</h1>
-<p>Selected academic, research, machine-learning, data-science, and software projects. Demonstrations and reports are embedded beside the project descriptions whenever available.</p>
-</div></section> -->
+  <!-- ===== Phone / tablet top bar ===== -->
+  <header class="topbar">
+    <a class="topbar-name" href="../index.html">Hari Prapan</a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="menu-lines" aria-hidden="true"></span>
+      <span class="menu-label">Menu</span>
+    </button>
+  </header>
 
-<section class="projects-page"><div class="container"><div class="projects-list">
+  <!-- ===== Sidebar: profile + navigation ===== -->
+  <aside class="sidebar" id="site-nav">
+    <a class="sidebar-profile" href="../index.html">
+      <img src="../images/profile.jpg" alt="Hari Prapan" width="770" height="613">
+      <span class="sidebar-name">Hari Prapan</span>
+      <span class="sidebar-location">AB13 · CSE · IIT Gandhinagar · India</span>
+    </a>
+    <nav class="sidebar-nav" aria-label="Main">
+        <a href="../index.html">Home</a>
+        <a href="../research/">Research</a>
+        <a href="../education/">Education</a>
+        <a href="../projects/" class="is-active" aria-current="page">Projects</a>
+        <a href="../courses/">Courses</a>
+        <a href="../index.html#contact">Contact</a>
+    </nav>
+    <p class="sidebar-foot">&copy; 2026 Hari Prapan</p>
+  </aside>
+  <div class="scrim" hidden></div>
 
-<article class="project-showcase">
+  <main id="main" class="wide">
+    <span id="top"></span>
+    <header class="page-head">
+      <h1>Projects</h1>
+    </header>
 
-  <!-- =========================
-       PROJECT VIDEO
-       ========================= -->
+    <nav class="project-index" aria-label="Projects on this page">
+      <ol>
+        <li><a href="#project-01"><span>01</span>Secure Federated Renyi Fair Inference: Enhancing Privacy in Fairness-Aware Federated Learning</a></li>
+        <li><a href="#project-02"><span>02</span>Learning Client Value</a></li>
+        <li><a href="#project-03"><span>03</span>DataEaze</a></li>
+        <li><a href="#project-04"><span>04</span>Effective Integration of Generative AI into Programming Learning Environments</a></li>
+        <li><a href="#project-05"><span>05</span>Agro-Business Data Analysis Capstone Project</a></li>
+        <li><a href="#project-06"><span>06</span>Movie Ticket Booking Web App - 2</a></li>
+        <li><a href="#project-07"><span>07</span>Movie Ticket Booking Web App - 1</a></li>
+        <li><a href="#project-08"><span>08</span>Sentiment Analysis ML Project</a></li>
+        <li><a href="#project-09"><span>09</span>Strategies for Professional Growth</a></li>
+        <li><a href="#project-10"><span>10</span>OddTown-EvenTown Learning cum Gaming Web App</a></li>
+      </ol>
+    </nav>
 
-  <div class="project-media">
+    <section class="projects">
+      <!-- ===== Project 01 ===== -->
+      <article class="project" id="project-01">
+        <div class="project-media">
+          <iframe src="https://drive.google.com/file/d/17l4XZTrL8A9xj59iJbMVfvJmzjNTNvUe/preview" title="Secure Federated Renyi Fair Inference Project Video" loading="lazy" allow="autoplay" allowfullscreen></iframe>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-number">01</span>
+            <span class="badge">Project</span>
+          </div>
+          <h3>Secure Federated Renyi Fair Inference: Enhancing Privacy in Fairness-Aware Federated Learning</h3>
+          <p class="project-course">CS621 · Ethics of AI</p>
+          <p class="project-institute">Institute: IIT Gandhinagar</p>
+          <div class="project-text">
+            <p>This work proposes Secure FedRenyi, a privacy-preserving extension of fairness-aware federated learning that protects sensitive client fairness statistics during aggregation.</p>
+            <p>The method combines cryptographic secure aggregation using Diffie–Hellman-based pairwise masking with Laplace differential privacy for gradient updates.</p>
+          </div>
+          <ul class="tags"><li>Federated Learning</li><li>Fairness</li><li>Secure Aggregation</li><li>Differential Privacy</li></ul>
+        </div>
+      </article>
 
-    <iframe
-      src="https://drive.google.com/file/d/17l4XZTrL8A9xj59iJbMVfvJmzjNTNvUe/preview"
-      title="Secure Federated Renyi Fair Inference Project Video"
-      loading="lazy"
-      allow="autoplay"
-      allowfullscreen>
-    </iframe>
+      <!-- ===== Project 02 ===== -->
+      <article class="project" id="project-02">
+        <div class="project-media">
+          <iframe src="https://drive.google.com/file/d/1DFN_MDIBCiatJf14edLweOVvOG9hHCE2/preview" title="Learning client value" loading="lazy" allow="autoplay"></iframe>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-number">02</span>
+            <span class="badge">Project</span>
+          </div>
+          <h3>Learning Client Value</h3>
+          <p class="project-course">CS620 · Incentive and Machine Learning</p>
+          <p class="project-institute">Institute: IIT Gandhinagar</p>
+          <div class="project-text">
+            <p>This project proposes a client selection mechanism for Federated Learning that uses a hybrid scoring rule to balance client bids with their learned historical value.</p>
+            <p>By updating these valuations based on measured model improvements and applying a decay factor to unselected clients, the server can effectively filter out low-value or malicious participants within a fixed budget.</p>
+          </div>
+          <ul class="tags"><li>Federated Learning</li><li>Mechanism Design</li><li>Client Selection</li><li>Incentives</li></ul>
+        </div>
+      </article>
 
-  </div>
+      <!-- ===== Project 03 ===== -->
+      <article class="project" id="project-03">
+        <div class="project-media">
+          <iframe src="https://drive.google.com/file/d/1QwuVzLfA8GQKaH1ZSEoEdj4R5Apxj9BZ/preview" title="DataEaze project" loading="lazy" allow="autoplay" allowfullscreen></iframe>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-number">03</span>
+            <span class="badge">Project</span>
+          </div>
+          <h3>DataEaze</h3>
+          <p class="project-course">M.Sc. Minor &amp; Major Project</p>
+          <p class="project-institute">Institute: CUSB · NIELIT Patna</p>
+          <div class="project-text">
+            <p>DataEaze is a no-code data analytics and modeling platform that automates the complete workflow from data upload to actionable insights.</p>
+            <p>The first version was developed at CUSB under the guidance of Dr. Sandeep Kumar. The upgraded version was later developed at NIELIT Patna under the supervision of Shri Ankit Kumar (Scientist-C), with major improvements in functionality, scalability, and user experience.</p>
+          </div>
+          <ul class="tags"><li>Flask</li><li>Vue.js</li><li>Scikit-Learn</li><li>PyTorch</li><li>Generative AI</li></ul>
+        </div>
+      </article>
 
+      <!-- ===== Project 04 ===== -->
+      <article class="project" id="project-04">
+        <div class="project-media">
+          <iframe src="https://www.youtube.com/embed/eVmGzSIUAiI" title="Effective Integration of Generative AI into Programming Learning Environments" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-number">04</span>
+            <span class="badge">Project</span>
+          </div>
+          <h3>Effective Integration of Generative AI into Programming Learning Environments</h3>
+          <p class="project-course">Group Project</p>
+          <p class="project-institute">Institute: IIT Madras</p>
+          <div class="project-text">
+            <p>A group project studying how Generative AI tools can be integrated effectively into programming learning environments.</p>
+          </div>
+          <ul class="tags"><li>Generative AI</li><li>Programming Education</li></ul>
+        </div>
+      </article>
 
-  <!-- =========================
-       PROJECT DESCRIPTION
-       ========================= -->
+      <!-- ===== Project 05 ===== -->
+      <article class="project" id="project-05">
+        <div class="project-media">
+          <iframe src="https://drive.google.com/file/d/1oS4f7zgE9-NQWglVKdc9dU8sLMie8h5V/preview" title="Agro-Business Data Analysis Capstone Project report" loading="lazy" allow="autoplay"></iframe>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-number">05</span>
+            <span class="badge">Project</span>
+          </div>
+          <h3>Agro-Business Data Analysis Capstone Project</h3>
+          <p class="project-course">Business Data Management</p>
+          <p class="project-institute">Institute: IIT Madras</p>
+          <div class="project-text">
+            <p>This project used primary socio-economic and production data collected from a local farmer to assess crop profitability, cost structures, and resource utilization.</p>
+            <p>The analysis produced data-driven recommendations for crop selection and market strategy, with the potential to increase annual revenue by nearly 25%.</p>
+          </div>
+          <ul class="tags"><li>Data Analysis</li><li>Statistics</li><li>Capstone</li></ul>
+            <div class="link-row"><a href="https://drive.google.com/file/d/1oS4f7zgE9-NQWglVKdc9dU8sLMie8h5V/view" target="_blank" rel="noreferrer">Detailed Analysis Report ↗</a></div>
+        </div>
+      </article>
 
-  <div class="project-body">
+      <!-- ===== Project 06 ===== -->
+      <article class="project" id="project-06">
+        <div class="project-media">
+          <iframe src="https://www.youtube.com/embed/m1PYFowZMYU" title="Movie Ticket Booking Web App - 2 demo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-number">06</span>
+            <span class="badge">Project</span>
+          </div>
+          <h3>Movie Ticket Booking Web App - 2</h3>
+          <p class="project-course">App Development 2 Project</p>
+          <p class="project-institute">Institute: IIT Madras</p>
+          <div class="project-text">
+            <p>A full-stack movie-ticket booking application developed using Flask and Vue.js with API-driven functionality and asynchronous background tasks.</p>
+          </div>
+          <ul class="tags"><li>Flask</li><li>Vue.js</li><li>Python</li><li>SQLite</li><li>Celery</li><li>Mailhog</li></ul>
+            <div class="link-row"><a href="https://drive.google.com/drive/folders/1W8_Q4B8b9E8hBt3apXEsVio9dh95b85x?usp=sharing" target="_blank" rel="noreferrer">Source Code ↗</a></div>
+        </div>
+      </article>
 
-    <div class="project-topline">
+      <!-- ===== Project 07 ===== -->
+      <article class="project" id="project-07">
+        <div class="project-media">
+          <iframe src="https://www.youtube.com/embed/BPQBfo7-lTU" title="Movie Ticket Booking Web App - 1 demo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-number">07</span>
+            <span class="badge">Project</span>
+          </div>
+          <h3>Movie Ticket Booking Web App - 1</h3>
+          <p class="project-course">App Development 1 Project</p>
+          <p class="project-institute">Institute: IIT Madras</p>
+          <div class="project-text">
+            <p>A movie-ticket booking web application built with Flask, Jinja2, Python, SQLite, HTML, CSS, APIs, and data-visualization components.</p>
+          </div>
+          <ul class="tags"><li>Flask</li><li>Jinja2</li><li>Python</li><li>SQLite</li><li>HTML/CSS</li></ul>
+            <div class="link-row"><a href="https://drive.google.com/drive/folders/1iOyYsRE7SKoybKVXqbgjEZSVGo8NbPtD?usp=sharing" target="_blank" rel="noreferrer">Source Code ↗</a></div>
+        </div>
+      </article>
 
-      <span class="project-number">
-        01
-      </span>
+      <!-- ===== Project 08 ===== -->
+      <article class="project" id="project-08">
+        <div class="project-media">
+          <iframe src="https://drive.google.com/file/d/1o5kNXbTZGNlVBuTNyZjNF1S5qxAXpqJx/preview" title="ML Sentiment Analysis" loading="lazy" allow="autoplay" allowfullscreen></iframe>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-number">08</span>
+            <span class="badge">Project</span>
+          </div>
+          <h3>Sentiment Analysis ML Project</h3>
+          <p class="project-course">Second-year Project</p>
+          <p class="project-institute">Institute: IIT Madras</p>
+          <div class="project-text">
+            <p>The project classified movie reviews as positive or negative using machine-learning methods.</p>
+            <p>I performed exploratory data analysis and visualization, then evaluated Naive Bayes, Logistic Regression, and Decision Tree models, achieving around 80% prediction accuracy.</p>
+          </div>
+          <ul class="tags"><li>Scikit-Learn</li><li>NLP</li><li>Logistic Regression</li><li>Naive Bayes</li><li>EDA</li></ul>
+        </div>
+      </article>
 
-      <span class="project-badge">
-        Project
-      </span>
+      <!-- ===== Project 09 ===== -->
+      <article class="project" id="project-09">
+        <div class="project-media">
+          <iframe src="https://www.youtube.com/embed/RLECX_-eUr0" title="SPG" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-number">09</span>
+            <span class="badge">Project</span>
+          </div>
+          <h3>Strategies for Professional Growth</h3>
+          <p class="project-course">Group Project</p>
+          <p class="project-institute">Institute: IIT Madras</p>
+          <div class="project-text">
+            <p>A short group research project on the importance of communication and listening skills.</p>
+          </div>
+          <ul class="tags"><li>Communication</li><li>Professional Skills</li></ul>
+            <div class="link-row"><a href="https://drive.google.com/file/d/18GUx3n9ctEldovyyj_d_cW4qMmwdXb0T/view?usp=drive_link" target="_blank" rel="noreferrer">Team Contract ↗</a><a href="https://drive.google.com/file/d/1QOuA2awVAQB94huvF4AABllIR65tPxRI/view?usp=drive_link" target="_blank" rel="noreferrer">GP1 Submission ↗</a><a href="https://drive.google.com/file/d/1BQJvU1dUVQoczToBKA0_qxI3UBw7e1mq/view?usp=drive_link" target="_blank" rel="noreferrer">Poster ↗</a><a href="https://drive.google.com/file/d/1Oq89ANeeJBWGBF0CZ_Ow71UfE0quLGl8/view?usp=drive_link" target="_blank" rel="noreferrer">GP2 Submission ↗</a></div>
+        </div>
+      </article>
 
-    </div>
+      <!-- ===== Project 10 ===== -->
+      <article class="project" id="project-10">
+        <div class="project-media">
+          <iframe src="https://www.youtube.com/embed/0g_SxuYUZs8?start=5094" title="OddTown-EvenTown Learning cum Gaming Web App demo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-number">10</span>
+            <span class="badge">Project</span>
+          </div>
+          <h3>OddTown-EvenTown Learning cum Gaming Web App</h3>
+          <p class="project-course">Special Topics in Computer Science: Application of Linear Algebra to Combinatorics</p>
+          <p class="project-institute">Institute: IIT Gandhinagar</p>
+          <div class="project-text">
+            <p>A learning-cum-gaming web application developed for a special-topics course on applications of linear algebra to combinatorics.</p>
+          </div>
+          <ul class="tags"><li>Educational Game</li><li>Combinatorics</li><li>Web App</li></ul>
+            <div class="link-row"><a href="https://www.youtube.com/live/0g_SxuYUZs8?si=R5kT0ADPavMlHSTi&t=5094" target="_blank" rel="noreferrer">Demo ↗</a><a href="https://drive.google.com/drive/folders/1zOdt7pMmSe4sIZlVbg9-diIP7sthGyOT?usp=sharing" target="_blank" rel="noreferrer">Source Code ↗</a></div>
+        </div>
+      </article>
 
+    </section>
 
-    <h3>
-      Secure Federated Renyi Fair Inference:
-      Enhancing Privacy in Fairness-Aware Federated Learning
-    </h3>
-
-
-    <p class="project-course">
-      CS621 · Ethics of AI
-    </p>
-
-
-    <p class="project-institute">
-      Institute: IIT Gandhinagar
-    </p>
-
-
-    <div class="project-description">
-
-      <p>
-        This work proposes Secure FedRenyi, a privacy-preserving
-        extension of fairness-aware federated learning that protects
-        sensitive client fairness statistics during aggregation.
-      </p>
-
-      <p>
-        The method combines cryptographic secure aggregation using
-        Diffie–Hellman-based pairwise masking with Laplace differential
-        privacy for gradient updates. 
-      </p>
-
-     
-
-    </div>
-
-
-    <!-- =========================
-         PROJECT TAGS
-         ========================= -->
-
-    <div class="project-tags">
-
-      <span>
-        Federated Learning
-      </span>
-
-      <span>
-        Fairness
-      </span>
-
-      <span>
-        Secure Aggregation
-      </span>
-
-      <span>
-        Differential Privacy
-      </span>
-
-    </div>
-
-
-   
-
-  </div>
-
-</article>
-    <article class="project-showcase reverse">
-      <!-- <div class="project-media"><div class="media-placeholder"><strong>Learning Client Value</strong><span>Embed the project PDF here using a Google Drive /preview URL.</span></div></div> -->
-            <div class="project-media"><iframe src="https://drive.google.com/file/d/1DFN_MDIBCiatJf14edLweOVvOG9hHCE2/preview" title="Learning client value" loading="lazy" allow="autoplay"></iframe></div>
-      <div class="project-body">
-        <div class="project-topline"><span class="project-number">02</span><span class="project-badge">Project</span></div>
-        <h3>Learning Client Value</h3>
-        <p class="project-course">CS620 · Incentive and Machine Learning</p>
-        <p class="project-institute">Institute: IIT Gandhinagar</p>
-        <div class="project-description"><p>This project proposes a client selection mechanism for Federated Learning that uses a hybrid scoring rule to balance client bids with their learned historical value.</p><p>By updating these valuations based on measured model improvements and applying a decay factor to unselected clients, the server can effectively filter out low-value or malicious participants within a fixed budget.</p></div>
-        <div class="project-tags"><span>Federated Learning</span><span>Mechanism Design</span><span>Client Selection</span><span>Incentives</span></div>
-        
-        <div class="project-links"></div>
-      </div>
-    </article>
-    <article class="project-showcase">
-     <div class="project-media">
-
-    <iframe
-      src="https://drive.google.com/file/d/1QwuVzLfA8GQKaH1ZSEoEdj4R5Apxj9BZ/preview"
-      title="dataeaze
-      loading="lazy"
-      allow="autoplay"
-      allowfullscreen>
-    </iframe>
-
-  </div>
-      <div class="project-body">
-        <div class="project-topline"><span class="project-number">03</span><span class="project-badge">Project</span></div>
-        <h3>DataEaze</h3>
-        <p class="project-course">M.Sc. Minor & Major Project</p>
-        <p class="project-institute">Institute: CUSB · NIELIT Patna</p>
-        <div class="project-description"><p>DataEaze is a no-code data analytics and modeling platform that automates the complete workflow from data upload to actionable insights.</p><p>The first version was developed at CUSB under the guidance of Dr. Sandeep Kumar. The upgraded version was later developed at NIELIT Patna under the supervision of Shri Ankit Kumar (Scientist-C), with major improvements in functionality, scalability, and user experience.</p></div>
-        <div class="project-tags"><span>Flask</span><span>Vue.js</span><span>Scikit-Learn</span><span>PyTorch</span><span>Generative AI</span></div>
-        
-        <div class="project-links"></div>
-      </div>
-    </article>
-<article class="project-showcase reverse">
-
-  <!-- Project Video -->
-  <div class="project-media">
-    <iframe
-      src="https://www.youtube.com/embed/eVmGzSIUAiI"
-      title="Effective Integration of Generative AI into Programming Learning Environments"
-      loading="lazy"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-
-
-  <!-- Project Content -->
-  <div class="project-body">
-
-    <div class="project-topline">
-      <span class="project-number">04</span>
-      <span class="project-badge">Project</span>
-    </div>
-
-
-    <h3>
-      Effective Integration of Generative AI into
-      Programming Learning Environments
-    </h3>
-
-
-    <p class="project-course">
-      Group Project
-    </p>
-
-
-    <p class="project-institute">
-      Institute: IIT Madras
-    </p>
-
-
-    <div class="project-description">
-      <p>
-        A group project studying how Generative AI tools
-        can be integrated effectively into programming
-        learning environments.
-      </p>
-    </div>
-
-
-    <div class="project-tags">
-      <span>Generative AI</span>
-      <span>Programming Education</span>
-    </div>
-
-  </div>
-
-</article>
-    <article class="project-showcase">
-      <div class="project-media"><iframe src="https://drive.google.com/file/d/1oS4f7zgE9-NQWglVKdc9dU8sLMie8h5V/preview" title="Agro-Business Data Analysis Capstone Project report" loading="lazy" allow="autoplay"></iframe></div>
-      <div class="project-body">
-        <div class="project-topline"><span class="project-number">05</span><span class="project-badge">Project</span></div>
-        <h3>Agro-Business Data Analysis Capstone Project</h3>
-        <p class="project-course">Business Data Management</p>
-        <p class="project-institute">Institute: IIT Madras</p>
-        <div class="project-description"><p>This project used primary socio-economic and production data collected from a local farmer to assess crop profitability, cost structures, and resource utilization.</p><p>The analysis produced data-driven recommendations for crop selection and market strategy, with the potential to increase annual revenue by nearly 25%.</p></div>
-        <div class="project-tags"><span>Data Analysis</span><span>Statistics</span><span>Capstone</span></div>
-        
-        <div class="project-links"><a href="https://drive.google.com/file/d/1oS4f7zgE9-NQWglVKdc9dU8sLMie8h5V/view" target="_blank" rel="noreferrer">Detailed Analysis Report ↗</a></div>
-      </div>
-    </article>
-    <article class="project-showcase reverse">
-      <div class="project-media"><iframe src="https://www.youtube.com/embed/m1PYFowZMYU" title="Movie Ticket Booking Web App - 2 demo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="project-body">
-        <div class="project-topline"><span class="project-number">06</span><span class="project-badge">Project</span></div>
-        <h3>Movie Ticket Booking Web App - 2</h3>
-        <p class="project-course">App Development 2 Project</p>
-        <p class="project-institute">Institute: IIT Madras</p>
-        <div class="project-description"><p>A full-stack movie-ticket booking application developed using Flask and Vue.js with API-driven functionality and asynchronous background tasks.</p></div>
-        <div class="project-tags"><span>Flask</span><span>Vue.js</span><span>Python</span><span>SQLite</span><span>Celery</span><span>Mailhog</span></div>
-        
-        <div class="project-links"><a href="https://drive.google.com/drive/folders/1W8_Q4B8b9E8hBt3apXEsVio9dh95b85x?usp=sharing" target="_blank" rel="noreferrer">Source Code ↗</a></div>
-      </div>
-    </article>
-    <article class="project-showcase">
-      <div class="project-media"><iframe src="https://www.youtube.com/embed/BPQBfo7-lTU" title="Movie Ticket Booking Web App - 1 demo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="project-body">
-        <div class="project-topline"><span class="project-number">07</span><span class="project-badge">Project</span></div>
-        <h3>Movie Ticket Booking Web App - 1</h3>
-        <p class="project-course">App Development 1 Project</p>
-        <p class="project-institute">Institute: IIT Madras</p>
-        <div class="project-description"><p>A movie-ticket booking web application built with Flask, Jinja2, Python, SQLite, HTML, CSS, APIs, and data-visualization components.</p></div>
-        <div class="project-tags"><span>Flask</span><span>Jinja2</span><span>Python</span><span>SQLite</span><span>HTML/CSS</span></div>
-        
-        <div class="project-links"><a href="https://drive.google.com/drive/folders/1iOyYsRE7SKoybKVXqbgjEZSVGo8NbPtD?usp=sharing" target="_blank" rel="noreferrer">Source Code ↗</a></div>
-      </div>
-    </article>
-    <article class="project-showcase reverse">
-     <div class="project-media">
-  <iframe
-    src="https://drive.google.com/file/d/1o5kNXbTZGNlVBuTNyZjNF1S5qxAXpqJx/preview"
-    title="ML Sentiment Analysis"
-    loading="lazy"
-    allow="autoplay"
-    allowfullscreen>
-  </iframe>
-</div>
-      <div class="project-body">
-        <div class="project-topline"><span class="project-number">08</span><span class="project-badge">Project</span></div>
-        <h3>Sentiment Analysis ML Project</h3>
-        <p class="project-course">Second-year Project</p>
-        <p class="project-institute">Institute: IIT Madras</p>
-        <div class="project-description"><p>The project classified movie reviews as positive or negative using machine-learning methods.</p><p>I performed exploratory data analysis and visualization, then evaluated Naive Bayes, Logistic Regression, and Decision Tree models, achieving around 80% prediction accuracy.</p></div>
-        <div class="project-tags"><span>Scikit-Learn</span><span>NLP</span><span>Logistic Regression</span><span>Naive Bayes</span><span>EDA</span></div>
-        
-        <div class="project-links"></div>
-      </div>
-    </article>
-    <article class="project-showcase">
-      <div class="project-media">
-  <iframe
-    src="https://www.youtube.com/embed/RLECX_-eUr0"
-    title="SPG"
-    loading="lazy"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-</div>
-      <div class="project-body">
-        <div class="project-topline"><span class="project-number">09</span><span class="project-badge">Project</span></div>
-        <h3>Strategies for Professional Growth</h3>
-        <p class="project-course">Group Project</p>
-        <p class="project-institute">Institute: IIT Madras</p>
-        <div class="project-description"><p>A short group research project on the importance of communication and listening skills.</p></div>
-        <div class="project-tags"><span>Communication</span><span>Professional Skills</span></div>
-        <!-- <div class="project-team"><strong>Team:</strong> Hari Prapan, Pragya Singh, Ullas Kumar, Visist Tallam, Dhruv Pamneja</div> -->
-        <div class="project-links"><a href="https://drive.google.com/file/d/18GUx3n9ctEldovyyj_d_cW4qMmwdXb0T/view?usp=drive_link" target="_blank" rel="noreferrer">Team Contract ↗</a><a href="https://drive.google.com/file/d/1QOuA2awVAQB94huvF4AABllIR65tPxRI/view?usp=drive_link" target="_blank" rel="noreferrer">GP1 Submission ↗</a><a href="https://drive.google.com/file/d/1BQJvU1dUVQoczToBKA0_qxI3UBw7e1mq/view?usp=drive_link" target="_blank" rel="noreferrer">Poster ↗</a><a href="https://drive.google.com/file/d/1Oq89ANeeJBWGBF0CZ_Ow71UfE0quLGl8/view?usp=drive_link" target="_blank" rel="noreferrer">GP2 Submission ↗</a></div>
-      </div>
-    </article>
-    <article class="project-showcase reverse">
-      <div class="project-media"><iframe src="https://www.youtube.com/embed/0g_SxuYUZs8?start=5094" title="OddTown-EvenTown Learning cum Gaming Web App demo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="project-body">
-        <div class="project-topline"><span class="project-number">10</span><span class="project-badge">Project</span></div>
-        <h3>OddTown-EvenTown Learning cum Gaming Web App</h3>
-        <p class="project-course">Special Topics in Computer Science: Application of Linear Algebra to Combinatorics</p>
-        <p class="project-institute">Institute: IIT Gandhinagar</p>
-        <div class="project-description"><p>A learning-cum-gaming web application developed for a special-topics course on applications of linear algebra to combinatorics.</p></div>
-        <div class="project-tags"><span>Educational Game</span><span>Combinatorics</span><span>Web App</span></div>
-        
-        <div class="project-links"><a href="https://www.youtube.com/live/0g_SxuYUZs8?si=R5kT0ADPavMlHSTi&t=5094" target="_blank" rel="noreferrer">Demo ↗</a><a href="https://drive.google.com/drive/folders/1zOdt7pMmSe4sIZlVbg9-diIP7sthGyOT?usp=sharing" target="_blank" rel="noreferrer">Source Code ↗</a></div>
-      </div>
-    </article>
-</div></div></section>
-</main>
-
-<footer class="site-footer"><div class="container footer-row"><span>© 2026 Hari Prapan</span><a href="#top">Back to top ↑</a></div></footer>
+    <footer class="site-footer">
+      <span>&copy; 2026 Hari Prapan</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </main>
 </body>
 </html>
