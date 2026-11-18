@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Academic visits, conferences and other trips by Hari Prapan, with photos.">
+  <meta name="theme-color" content="#141c3a">
+  <title>Trips | Hari Prapan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap">
+  <link rel="stylesheet" href="../style.css">
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- ===== Phone / tablet top bar ===== -->
+  <header class="topbar">
+    <a class="topbar-name" href="../index.html">Hari Prapan</a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="menu-lines" aria-hidden="true"></span>
+      <span class="menu-label">Menu</span>
+    </button>
+  </header>
+
+  <!-- ===== Sidebar: profile + navigation ===== -->
+  <aside class="sidebar" id="site-nav">
+    <a class="sidebar-profile" href="../index.html">
+      <img src="../images/profile.jpg" alt="Hari Prapan" width="770" height="613">
+      <span class="sidebar-name">Hari Prapan</span>
+      <span class="sidebar-location">AB13 · CSE · IIT Gandhinagar · India</span>
+    </a>
+    <nav class="sidebar-nav" aria-label="Main">
+        <a href="../index.html">Home</a>
+        <a href="../research/">Research</a>
+        <a href="../education/">Education</a>
+        <a href="../projects/">Projects</a>
+        <a href="../courses/">Courses</a>
+        <a href="../trips/" class="is-active" aria-current="page">Trips</a>
+        <a href="../index.html#contact">Contact</a>
+    </nav>
+    <p class="sidebar-foot">&copy; 2026 Hari Prapan</p>
+  </aside>
+  <div class="scrim" hidden></div>
+
+  <main id="main" class="wide">
+    <span id="top"></span>
+    <header class="page-head">
+      <h1>Trips</h1>
+      <p>Academic visits, conferences and other journeys, with a few photos from each.</p>
+    </header>
+
+    <div class="trips">
+
+      <!-- ================= HOW TO ADD A TRIP =================
+           1. Upload the trip's photos to the images/trips/ folder.
+              Any number works; 3 or more are shown as a mosaic.
+           2. Copy the template below, delete the comment markers around it,
+              and paste it ABOVE the newest trip (list stays newest first).
+           3. Change the id, date, place, title, description and photo names.
+              A photo that doesn't exist yet is hidden automatically.
+
+      <section class="trip" id="short-unique-name">
+        <div class="trip-side">
+          <p class="trip-date">Month Year</p>
+          <p class="trip-place"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>City or Institute</p>
+        </div>
+        <div class="trip-main">
+          <h2>Trip title</h2>
+          <p>Short description of the visit.</p>
+          <div class="trip-gallery">
+            <button type="button" class="trip-photo"><img src="../images/trips/photo-1.jpg" alt="Describe the photo" loading="lazy"></button>
+            <button type="button" class="trip-photo"><img src="../images/trips/photo-2.jpg" alt="Describe the photo" loading="lazy"></button>
+            <button type="button" class="trip-photo"><img src="../images/trips/photo-3.jpg" alt="Describe the photo" loading="lazy"></button>
+          </div>
+        </div>
+      </section>
+      ====================================================== -->
+
+      <!-- ===== Trip: IIIT Hyderabad ===== -->
+      <section class="trip" id="iiit-hyderabad-2026">
+        <div class="trip-side">
+          <p class="trip-date">June 2026</p>
+          <p class="trip-place"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>IIIT Hyderabad</p>
+        </div>
+        <div class="trip-main">
+          <h2>Foundation of Ethical AI Workshop</h2>
+          <p>Attended Foundation of Ethical AI workshop at IIIT Hyderabad.</p>
+          <div class="trip-gallery">
+            <button type="button" class="trip-photo"><img src="../images/trips/iiith-1.jpg" alt="IIIT Hyderabad workshop" loading="lazy"></button>
+            <button type="button" class="trip-photo"><img src="../images/trips/iiith-2.jpg" alt="IIIT Hyderabad workshop" loading="lazy"></button>
+            <button type="button" class="trip-photo"><img src="../images/trips/iiith-3.jpg" alt="IIIT Hyderabad workshop" loading="lazy"></button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+
+    <footer class="site-footer">
+      <span>&copy; 2026 Hari Prapan</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </main>
+
+  <!-- Full-screen photo viewer (shared by every gallery on this page) -->
+  <dialog class="lightbox" aria-label="Photo viewer">
+    <button type="button" class="lb-close" aria-label="Close">&times;</button>
+    <button type="button" class="lb-prev" aria-label="Previous photo">&#8249;</button>
+    <figure>
+      <img alt="">
+      <figcaption></figcaption>
+    </figure>
+    <button type="button" class="lb-next" aria-label="Next photo">&#8250;</button>
+  </dialog>
+</body>
+</html>
