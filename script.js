@@ -195,3 +195,64 @@ async function loadTeaching() {
       "Please try again later.", true));
   }
 }
+
+
+/* ---------- 6. Trips: photo galleries + full-screen viewer ---------- */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const galleries = [...document.querySelectorAll(".trip-gallery")];
+  const box = document.querySelector(".lightbox");
+  if (!galleries.length || !box) return;
+
+  // Hide photos whose files haven't been uploaded yet
+  function dropIfBroken(img) {
+    const btn = img.closest(".trip-photo");
+    const gallery = btn && btn.parentElement;
+    if (btn) btn.remove();
+    if (gallery && !gallery.querySelector(".trip-photo")) gallery.remove();
+  }
+  galleries.forEach(g => g.querySelectorAll("img").forEach(img => {
+    if (img.complete && img.naturalWidth === 0) dropIfBroken(img);
+    else img.addEventListener("error", () => dropIfBroken(img));
+  }));
+
+  const bigImg = box.querySelector("img");
+  const caption = box.querySelector("figcaption");
+  let photos = [], index = 0;
+
+  function show(i) {
+    index = (i + photos.length) % photos.length;
+    const src = photos[index];
+    bigImg.src = src.currentSrc || src.src;
+    bigImg.alt = src.alt;
+    caption.textContent = `${src.alt}  ·  ${index + 1} / ${photos.length}`;
+  }
+
+  document.addEventListener("click", e => {
+    const btn = e.target.closest(".trip-photo");
+    if (!btn) return;
+    photos = [...btn.parentElement.querySelectorAll("img")];
+    box.classList.toggle("is-single", photos.length < 2);
+    show(photos.indexOf(btn.querySelector("img")));
+    box.showModal();
+  });
+
+  box.querySelector(".lb-close").addEventListener("click", () => box.close());
+  box.querySelector(".lb-prev").addEventListener("click", () => show(index - 1));
+  box.querySelector(".lb-next").addEventListener("click", () => show(index + 1));
+  box.addEventListener("click", e => { if (e.target === box) box.close(); });
+  box.addEventListener("keydown", e => {
+    if (e.key === "ArrowLeft") show(index - 1);
+    if (e.key === "ArrowRight") show(index + 1);
+  });
+
+  // Swipe left/right on phones
+  let startX = null;
+  box.addEventListener("touchstart", e => { startX = e.touches[0].clientX; }, { passive: true });
+  box.addEventListener("touchend", e => {
+    if (startX === null) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 50) show(index + (dx < 0 ? 1 : -1));
+    startX = null;
+  });
+});
